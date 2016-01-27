@@ -1,0 +1,19 @@
+/* RT Blog
+--------------------------------------------------- */
+/* line 5, ../../sass/shortcodes/rt-rtblog-carousel.scss */
+.rt-blog-carousel-shortcode article .entry-title {
+  margin-top: 0;
+}
+
+/* line 12, ../../sass/shortcodes/rt-rtblog-carousel.scss */
+.rt-blog-carousel-shortcode.style-1 article.has-post-thumbnail .entry-thumb {
+  float: left;
+  width: 50%;
+  padding-right: 5px;
+}
+/* line 17, ../../sass/shortcodes/rt-rtblog-carousel.scss */
+.rt-blog-carousel-shortcode.style-1 article.has-post-thumbnail .entry-content {
+  float: left;
+  width: 50%;
+  padding-left: 5px;
+}
