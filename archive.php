@@ -5,7 +5,7 @@
 ?>
 	<div id="content" <?php Avada()->layout->add_class( 'content_class' ); ?> <?php Avada()->layout->add_style( 'content_style' ); ?>>
 		
-		<h1 class="page-heading"><?php echo replace_color_title_in_archive( get_cat_name( $current_cat_id ) );?></h1>
+		<h1 class="page-heading"><?php echo rt_replace_color_title_in_archive( get_cat_name( $current_cat_id ) );?></h1>
 
 		<?php 
 		//load js
