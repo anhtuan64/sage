@@ -1,0 +1,67 @@
+/* Header
+--------------------------------------------------- */
+.fusion-header-wrapper .fusion-header {
+	background-color: #8f0512;
+}
+
+/* Slider
+--------------------------------------------------- */
+.home-slider .rev_slider .rev-title {
+	letter-spacing: -2px !important;
+}
+
+/* Shortcodes
+--------------------------------------------------- */
+/* Content Boxes */
+.fusion-content-boxes {
+	margin-bottom: 0 !important;
+}
+.fusion-content-boxes .content-box-column .content-wrapper .heading {
+	width: 100%;
+	margin-bottom: 7px;
+}
+.fusion-content-boxes .content-box-column .content-wrapper .heading > * {
+	display: block;
+	text-align: center;
+	width: 100%;
+}
+.fusion-content-boxes .content-box-column .content-wrapper .heading > .image {
+	margin-bottom: 42px;
+}
+.fusion-content-boxes .content-box-column .content-wrapper .heading > .image > img {
+	margin: 0;
+}
+
+/* Blog */
+.fusion-blog-layout-grid > .fusion-post-grid > .fusion-post-wrapper,
+.fusion-blog-layout-grid > .fusion-post-grid > .fusion-post-wrapper > .fusion-flexslider {
+	border: 0;
+}
+.fusion-blog-layout-grid > .fusion-post-grid > .fusion-post-wrapper > .fusion-flexslider {
+	margin-bottom: 11px;
+}
+.fusion-blog-layout-grid > .fusion-post-grid > .fusion-post-wrapper > .fusion-post-content-wrapper {
+	padding: 0;
+}
+#wrapper #main .fusion-blog-layout-grid > .fusion-post-grid > .fusion-post-wrapper > .fusion-post-content-wrapper .entry-title {
+	font-size: 15px;
+	line-height: 1.5em;
+}
+#wrapper #main .fusion-blog-layout-grid > .fusion-post-grid > .fusion-post-wrapper > .fusion-post-content-wrapper .entry-title a {
+	color: #8f0512;
+}
+#wrapper #main .fusion-blog-layout-grid > .fusion-post-grid > .fusion-post-wrapper > .fusion-post-content-wrapper .fusion-meta-info {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
