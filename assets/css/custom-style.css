@@ -10,6 +10,23 @@
 	letter-spacing: -2px !important;
 }
 
+/* Archive Page
+--------------------------------------------------- */
+.archive .page-heading {
+	line-height: 70px;
+	height: 70px;
+	border-bottom: 1px solid #dcdcdc;
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 35px;
+}
+.archive .page-heading .first-character {
+	color: #8f0512;
+}
+.archive .page-heading .characters {
+	color: #555555;
+}
+
 /* Shortcodes
 --------------------------------------------------- */
 /* Content Boxes */
@@ -54,14 +71,28 @@
 	display: none;
 }
 
-
-
-
-
-
-
-
-
+/* Third Party 
+--------------------------------------------------- */
+/* Isotope */
+.isotope-layout {
+	max-width: 100%;
+}
+.isotope-layout:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.isotope-layout .post {
+	float: left;
+	width: 17.9%;
+	margin-bottom: 0;
+}
+.isotope-layout .post h3 a {
+	color:#8f0512;
+}
+.isotope-layout .isotope-element-width2 { 
+	width: 38.4%; 
+}
 
 
 
