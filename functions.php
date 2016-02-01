@@ -56,9 +56,6 @@ function theme_enqueue_styles() {
 	/*-----------------------------------------------------------------*/
 	wp_register_script( 'owl-carousel', RT_THEME_URL . 'assets/js/third-party/owl-carousel/owl.carousel.min.js', array(), '1.0', true );
 	wp_register_script( 'magnific-popup', RT_THEME_URL . 'assets/js/third-party/jquery.magnific-popup.min.js', array(), '1.0', true );
-	wp_register_script( 'isotope-pkgd', RT_THEME_URL . 'assets/js/third-party/isotope/isotope.pkgd.js', array(), '1.0', true );
-	wp_register_script( 'packery-layout', RT_THEME_URL . 'assets/js/third-party/isotope/packery-mode.pkgd.js', array(), '1.0', true );
-	wp_register_script( 'masonry-layout', RT_THEME_URL . 'assets/js/third-party/isotope/masonry.pkgd.min.js', array(), '1.0', true );
 
 	// Enqueue RT Script
 	wp_enqueue_script( 'rt-main', RT_THEME_URL . 'assets/js/main.js', array(), '1.0', true );

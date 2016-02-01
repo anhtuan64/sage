@@ -15,4 +15,3 @@ if( ! function_exists( 'rt_replace_color_title_in_archive' ) ) {
 		return '<span class="first-character">'. $str3 .'</span> ' . implode( " ", $str2 );
 	}
 }
-

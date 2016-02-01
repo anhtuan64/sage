@@ -116,20 +116,6 @@
 				});
 			});
 		}
-		
-  		/*  Packery Layout in Archive Page
-		- - - - - - - - - - - - - - - - - - - - */
-		if ( $().isotope ) {
-			$('.isotope-layout').each(function(){
-				$(this).isotope({
-					itemSelector: '.isotope-element',
-					masonry: {
-						gutter: 30
-					}
-				});
-			});
-		}
 			  
-
 	});
 }(jQuery);
