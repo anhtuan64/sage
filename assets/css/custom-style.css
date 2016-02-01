@@ -23,15 +23,24 @@
 	font-weight: bold;
 	text-transform: uppercase;
 }
+
+/* Popiular
+--------------------------------------------------- */
+.page-heading {
+	line-height: 70px;
+	height: 70px;
+	border-bottom: 1px solid #dcdcdc;
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 35px;
+}
 .page-heading .first-character {
 	color: #8f0512;
 }
 .page-heading .characters {
 	color: #555555;
 }
-.post-content p {
-	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-}
+
 /* Header
 --------------------------------------------------- */
 .fusion-header-wrapper .fusion-header {
@@ -52,9 +61,6 @@
 }
 .fusion-row .fusion-main-menu .sub-menu ul {
 	top: 0;
-}
-.fusion-row .fusion-main-menu .sub-menu li a {
-	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
 /* Slider
@@ -90,6 +96,73 @@
 	bottom: 98px;
 	right: -105px;
 }
+
+/* Single course
+--------------------------------------------------- */
+.single-post-k-course .entry-title {
+	display: none;
+}
+.single-post-k-course .post-inner {
+	background: #d97158;
+	border-radius: 3px;
+	padding: 30px 15px 30px 30px;
+	margin-bottom: 40px;
+	width: 100%;
+	display: inline-block;
+}
+.single-post-k-course .post-inner .post-content {
+	margin-right: 355px;
+}
+.single-post-k-course .post-inner .post-content * {
+	color: #fff;
+}
+.single-post-k-course .post-inner .post-meta {
+	background-color: #ffffff;
+	border-radius: 3px;
+	width: 325px;
+	float: right;
+	overflow: hidden;
+}
+.single-post-k-course .post-inner .post-meta .course-meta {
+	padding: 10px;
+}
+.single-post-k-course .post-inner .post-meta .course-meta label {
+	width: 90px;
+	display: inline-block;
+}
+.single-post-k-course .post-inner .post-meta .course-meta select {
+	width: calc(100% - 90px);
+}
+.single-post-k-course .post-inner .post-meta .course-register {
+	background: #8f0512;
+	display: block;
+	width: 100%;
+	padding: 7px 0;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+}
+.single-post-k-course #wrapper .course-content .fusion-tabs.fusion-tabs-1.clean .nav-tabs {
+	border-bottom: 1px solid #dcdcdc;
+}
+.single-post-k-course #wrapper .course-content .fusion-tabs.fusion-tabs-1.clean .nav-tabs li a {
+	background: none;
+	border: 0;
+	padding: 7px 0;
+}
+.single-post-k-course #wrapper .course-content .fusion-tabs.fusion-tabs-1.clean .nav-tabs li a .fusion-tab-heading {
+	color: #555555;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+.single-post-k-course #wrapper .course-content .fusion-tabs.fusion-tabs-1.clean .nav-tabs li.active a {
+	background-color: #dcdcdc;
+	border-radius: 3px 3px 0 0;
+}
+.single-post-k-course #wrapper .course-content .fusion-tabs.fusion-tabs-1.clean .nav-tabs li.active a h4 {
+	font-weight: 600;
+}
+
 /* Shortcodes
 --------------------------------------------------- */
 /* Content Boxes */
@@ -213,13 +286,6 @@
 
 /* page course 
 -------------------------------------------------- */
-.page-id-166 #main {
-	padding: 10px 0 0;
-}
-/* page title bg */
-.page-id-166 h1 {
-	text-indent: -9999px;
-}
 /* page title div */
 .title-page {
 	font-size: 30px;
@@ -233,6 +299,7 @@
 .title-page span {
 	color: #8f0512;
 }
+
 /* taxonomy  */
 .cate-caurse .cate-ul {
 	overflow: hidden;
