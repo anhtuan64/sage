@@ -208,5 +208,114 @@
 	padding: 10px 34px;
 }
 .fusion-column-wrapper .wpcf7-form .wpcf7-submit:hover {
-	background: #5d020b
+	background: #5d020b;
+}
+
+/* page course 
+-------------------------------------------------- */
+.page-id-166 #main {
+	padding: 10px 0 0;
+}
+/* page title bg */
+.page-id-166 h1 {
+	text-indent: -9999px;
+}
+/* page title div */
+.title-page {
+	font-size: 30px;
+	color: #555555;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: 'Open Sans';
+	line-height: 55px;
+	border-bottom: 1px solid #dcdcdc;
+}
+.title-page span {
+	color: #8f0512;
+}
+/* taxonomy  */
+.cate-caurse .cate-ul {
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+.cate-caurse .cate-ul li {
+	width: 29%;
+    padding: 15px 0 30px;
+    float: left;
+    position: relative;
+    list-style: none;
+    text-align: center;
+    margin: 0 76px 0 0;
+}
+.cate-caurse .cate-ul li:nth-child(3n) {
+	margin-right: 0;
+}
+.cate-caurse .cate-ul li:after {
+    content: "\f07e";
+    font: normal normal normal 14px/1 FontAwesome;
+    display: block;
+    position: absolute;
+    top: 110px;
+    right: -57px;
+    width: 40px;
+    height: 40px;
+    background: #333;
+    font-size: 28px;
+    color: #fff;
+    border-radius: 50%;
+    line-height: 40px;
+}
+.cate-caurse .cate-ul li:nth-child(3n):after {
+	content: '';
+	visibility: hidden;
+}
+.cate-caurse .cate-ul li .img-cate {
+	display: block;
+	height: 190px;
+	position: relative;
+	padding: 0 37px;
+}
+.cate-caurse .cate-ul li .img-cate img {
+	max-height: 190px;
+	width: auto;
+	position: absolute;
+	top: 0;left: 0;right: 0;bottom: 0;
+	margin: auto;
+}
+.cate-caurse .cate-ul li .title-cate {
+	display: block;
+	color: #8f0512;
+	font-size: 14px;
+	font-weight: bold;
+    font-family:Arial;
+	padding: 0 37px;
+	height: 50px;
+	line-height: 25px;
+	overflow: hidden;
+}
+/* post cate */
+.cate-caurse .cate-ul li .post-cate {
+	width: 100%;
+	height: 200px;
+	background: #d97158;
+	border-radius: 7px;
+	margin: auto;
+}
+.cate-caurse .cate-ul li .post-cate .post-list {
+	overflow: hidden;
+	padding: 15px 15px 0;
+}
+.cate-caurse .cate-ul li .post-cate .post-list img {
+	width: 92px;
+	height: 92px;
+	border: 2px solid #fff;
+	float: left;
+	margin:5px 15px 0 0;
+}
+.cate-caurse .cate-ul li .post-cate .post-list .title-post {
+    color: #ffffff;
+    text-align: left;
+    display: inline-block;
+    float: left;
 }
