@@ -63,10 +63,13 @@
 }
 .informations-contact p {
 	margin-bottom: 3px;
-	padding-left: 32px;
 }
 .informations-contact p span {
 	line-height: 30px;
+}
+.informations-contact p span .fa {
+	margin-right: 10px;
+	width: 14px;
 }
 .informations-contact .fusion-social-links {
 	margin-top: 88px;
@@ -249,7 +252,7 @@
 
 /* Third Party 
 --------------------------------------------------- */
-
+/* Contact Form 7 */
 .fusion-column-wrapper .wpcf7-form p {
 	margin-bottom: 25px;
 }
@@ -269,20 +272,6 @@
 
 /* page course 
 -------------------------------------------------- */
-/* page title div */
-.title-page {
-	font-size: 30px;
-	color: #555555;
-	font-weight: bold;
-	text-transform: uppercase;
-	font-family: 'Open Sans';
-	line-height: 55px;
-	border-bottom: 1px solid #dcdcdc;
-}
-.title-page span {
-	color: #8f0512;
-}
-
 /* taxonomy  */
 .cate-caurse .cate-ul, .cate-caurse .box-new-relate .list-relate {
 	overflow: hidden;
@@ -412,4 +401,36 @@
     list-style: none;
     text-align: center;
     margin: 0 76px 0 0;
+	background: #5d020b
+}
+
+/* Newsletter */
+.fusion-widget-area .widget_newsletterwidget {
+	margin-bottom: 0;
+}
+.newsletter {
+	display: table;
+	margin: 5px auto 0;
+}
+.newsletter form p {
+	display: inline-block;
+}
+.newsletter-email {
+	border: 3px solid #cfcfcf;
+	border-right: none;
+	padding: 5px 18px;
+	width: 450px;
+	height: 50px;
+	color: #b7b7b7;
+	font-size: 18px;
+}
+.newsletter-submit {
+	background: #8f0512;
+	width: 170px;
+	height: 50px;
+	color: #FFF;
+	font-size: 18px;
+	text-transform: uppercase;
+	text-align: center;
+	border: none;
 }
