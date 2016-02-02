@@ -18,10 +18,13 @@ get_header(); ?>
 				$bgcate = get_field( 'images', 'k-course-category_'.$term->term_id );
 				
 		?>
-					<li> 
-						<a class="img-cate" href="<?php echo get_term_link( $term->term_id, 'k-course-category'); ?>" title="<?php echo $term->name; ?> ">
-							<img src="<?php echo $bgcate['url']; ?>" /> 
-						</a>
+					<li>
+						<span class="img-cate">
+							<?php if($bgcate) { ?>
+								<img src="<?php echo $bgcate['url']; ?>" alt="" /> 
+							<?php } ?>
+						</span>
+						
 						<a class="title-cate" href="<?php echo get_term_link( $term->term_id, 'k-course-category'); ?>" title="<?php echo $term->name; ?> ">
 							<?php echo $term->name; ?>
 						</a> 
