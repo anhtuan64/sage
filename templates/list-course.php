@@ -93,7 +93,7 @@ get_header(); ?>
 			?>
 				<div class="list-relate"> 
 					<a class="img" href="<?php the_permalink();?>" title="<?php the_title();?>">
-					<?php if(has_post_thumbnail()) the_post_thumbnail("rt_thumb300x200",array("alt" => get_the_title()));
+					<?php if(has_post_thumbnail()) the_post_thumbnail("rt_thumb300x300",array("alt" => get_the_title()));
 						else echo $no_thum; ?>
 					</a>
 					<a class="title-post" href="<?php the_permalink();?>" title="<?php the_title();?>"><?php echo the_title();?></a>
