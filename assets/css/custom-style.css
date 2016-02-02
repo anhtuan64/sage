@@ -125,7 +125,7 @@
 	height: 227px;
 	background: #d97158;
 	border-radius: 7px;
-	margin: auto;
+    margin: 15px auto 0;
 }
 .cate-caurse .cate-ul li:nth-child(3n+2) .post-cate {
 	background: #343f4e;
@@ -189,7 +189,9 @@
 	margin: 0 76px 0 0;
 	background: #5d020b
 }
-
+.page-template .cate-caurse .box-new-relate .list-relate {
+	background: #d34b7a;
+}
 /* Single course
 --------------------------------------------------- */
 .single-post-k-course .entry-title {

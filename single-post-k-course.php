@@ -15,9 +15,11 @@
 					
 			?>
 				<li> 
-					<a class="img-cate" href="<?php echo get_term_link( $term->term_id, 'k-course-category'); ?>" title="<?php echo $term->name; ?> ">
-						<img src="<?php echo $bgcate['url']; ?>" /> 
-					</a>
+					<span class="img-cate">
+						<?php if($bgcate) { ?>
+						<img src="<?php echo $bgcate['url']; ?>" />
+						<?php } ?> 
+					</span>
 					<a class="title-cate" href="<?php echo get_term_link( $term->term_id, 'k-course-category'); ?>" title="<?php echo $term->name; ?> ">
 						<?php echo $term->name; ?>
 					</a> 
