@@ -26,6 +26,7 @@ add_image_size( 'rt_thumb600x300', 600, 300, array( 'center', 'center' ) );
 add_image_size( 'rt_thumb300x200', 300, 200, array( 'center', 'center' ) );
 add_image_size( 'rt_thumb150x100', 150, 100, array( 'center', 'center' ) );
 add_image_size( 'rt_thumb500x999', 500, 999, array( 'center', 'center' ) );
+add_image_size( 'rt_thumb300x300', 300, 300, array( 'center', 'center' ) );
 
 /**
  *

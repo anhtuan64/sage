@@ -13,5 +13,6 @@ if( ! function_exists( 'rt_replace_color_title_in_archive' ) ) {
 		$str2 = ( explode( " ", $str ) );
 		$str3 = array_shift( $str2 );
 		return '<span class="first-character">'. $str3 .'</span> ' . implode( " ", $str2 );
+		
 	}
 }
