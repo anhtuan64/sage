@@ -8,9 +8,7 @@
  */
 
 get_header(); ?>
-<div class="title-page"> 
-	<?php echo rt_replace_color_title_in_archive(get_the_title()); ?>
-</div>
+<h1 class="page-heading"><?php echo rt_replace_color_title_in_archive( get_the_title() );?></h1>
 <div class="cate-caurse">
 		<?php
 			$categories = get_terms( 'k-course-category', 'orderby=count&hide_empty=0' );

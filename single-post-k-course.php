@@ -5,6 +5,30 @@
 			
 			<h1 class="page-heading"><?php echo rt_replace_color_title_in_archive( get_the_title() );?></h1>
 
+			<div class="cate-caurse">
+			<?php
+				$terms = get_terms( 'k-course-category', 'orderby=count&hide_empty=0' );
+				if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) :
+					echo '<ul class="cate-ul">';
+					foreach ( $terms as $term ) :
+						$bgcate = get_field( 'images', 'k-course-category_'.$term->term_id );
+					
+			?>
+				<li> 
+					<a class="img-cate" href="<?php echo get_term_link( $term->term_id, 'k-course-category'); ?>" title="<?php echo $term->name; ?> ">
+						<img src="<?php echo $bgcate['url']; ?>" /> 
+					</a>
+					<a class="title-cate" href="<?php echo get_term_link( $term->term_id, 'k-course-category'); ?>" title="<?php echo $term->name; ?> ">
+						<?php echo $term->name; ?>
+					</a> 
+				</li>
+			<?php
+					endforeach;
+					echo '</ul>'; // end cate ul 
+				endif;
+			?>
+			</div>
+
 			<div class="post-inner">
 				<div class="post-meta">
 					<?php
@@ -38,7 +62,7 @@
 						<?php 
 							// Adress
 							if ( is_array( $adress ) && count( $adress ) ) {
-								echo '<p><label>'. __( 'Adress: ', rt_language ) .'</label><select class="">';
+								echo '<p><label>'. __( 'Adress: ', RT_LANGUAGE ) .'</label><select class="">';
 								foreach ( $adress as $key => $value ) {
 									echo '<option value="'. $value['name'] .'">'. $value['name'] .'</option>';
 								}
@@ -46,7 +70,7 @@
 							}
 							// Opening
 							if ( is_array( $opening ) && count( $opening ) ) {
-								echo '<p><label>'. __( 'Opening: ', rt_language ) .'</label><select class="">';
+								echo '<p><label>'. __( 'Opening: ', RT_LANGUAGE ) .'</label><select class="">';
 								foreach ( $opening as $key => $value ) {
 									echo '<option value="'. $value['date'] .'">'. $value['date'] .'</option>';
 								}
@@ -54,21 +78,21 @@
 							}
 							// Class
 							if ( ! empty( $class ) ) {
-								echo '<p><label>'. __( 'Class: ', rt_language ) .'</label><span class="">'. $class .'</span></p>';
+								echo '<p><label>'. __( 'Class: ', RT_LANGUAGE ) .'</label><span class="">'. $class .'</span></p>';
 							}
 							// Duration
 							if ( ! empty( $duration ) ) {
-								echo '<p><label>'. __( 'Duration: ', rt_language ) .'</label><span class="">'. $duration .'</span></p>';
+								echo '<p><label>'. __( 'Duration: ', RT_LANGUAGE ) .'</label><span class="">'. $duration .'</span></p>';
 							}
 							// Tuition
 							if ( ! empty( $tuition ) ) {
-								echo '<p><label>'. __( 'Tuition: ', rt_language ) .'</label><span class="">'. $tuition .'</span></p>';
+								echo '<p><label>'. __( 'Tuition: ', RT_LANGUAGE ) .'</label><span class="">'. $tuition .'</span></p>';
 							}
 
 						// var_dump($adress);?>
 					</div>
 					<div>
-						<a href="" class="course-register"><?php _e( 'Course Register', rt_language )?></a>
+						<a href="" class="course-register"><?php _e( 'Course Register', RT_LANGUAGE )?></a>
 					</div>
 				</div>
 				<div class="post-content">
@@ -78,11 +102,11 @@
 			<div class="course-content">
 				<?php
 					$shortcodes = '[fusion_tabs design="clean" layout="horizontal" justified="yes" backgroundcolor="" inactivecolor="" bordercolor="" class="" id=""]
-					[fusion_tab title="'. __( 'Course Content', rt_language ) .'" icon=""]'. $course_content .'[/fusion_tab]
-					[fusion_tab title="'. __( 'Benefits of Participation', rt_language ) .'" icon=""]'. $course_benefits .'[/fusion_tab]
-					[fusion_tab title="'. __( 'Who should attend', rt_language ) .'" icon=""]'. $who_course .'[/fusion_tab]
-					[fusion_tab title="'. __( 'Trainer', rt_language ) .'" icon=""]'. $course_content .'[/fusion_tab]
-					[fusion_tab title="'. __( 'Brochure', rt_language ) .'" icon=""][/fusion_tab]
+					[fusion_tab title="'. __( 'Course Content', RT_LANGUAGE ) .'" icon=""]'. $course_content .'[/fusion_tab]
+					[fusion_tab title="'. __( 'Benefits of Participation', RT_LANGUAGE ) .'" icon=""]'. $course_benefits .'[/fusion_tab]
+					[fusion_tab title="'. __( 'Who should attend', RT_LANGUAGE ) .'" icon=""]'. $who_course .'[/fusion_tab]
+					[fusion_tab title="'. __( 'Trainer', RT_LANGUAGE ) .'" icon=""]'. $course_content .'[/fusion_tab]
+					[fusion_tab title="'. __( 'Brochure', RT_LANGUAGE ) .'" icon=""][/fusion_tab]
 					[/fusion_tabs]';
 					echo do_shortcode( $shortcodes );
 				?>
