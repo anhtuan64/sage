@@ -32,6 +32,7 @@ h1.entry-title .characters {
 .fusion-row .fusion-main-menu .sub-menu li a {
 	padding-top: 10px;
 	padding-bottom: 10px;
+	border-bottom: 1px solid #FFF;
 }
 .fusion-row .fusion-main-menu > ul > li > a {
 	border-top: none;	
@@ -408,22 +409,10 @@ h1.entry-title .characters {
 #wrapper #main .fusion-blog-layout-grid > .fusion-post-grid > .fusion-post-wrapper > .fusion-post-content-wrapper .fusion-meta-info {
 	display: none;
 }
-.flex-active-slide .fusion-image-wrapper .fusion-rollover {
-	background-image: linear-gradient(top, rgba(143,5,18,0.8) 0%, rgba(143,5,18,0.8) 100%);
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(143,5,18,0.8)), color-stop(1, rgba(143,5,18,0.8)));
-	background-image: filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#a0ce4e, endColorstr=#a0ce4e), progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
-	background-image: -webkit-linear-gradient(top, rgba(143,5,18,0.8) 0%, rgba(143,5,18,0.8) 100%);
-	background-image: -moz-linear-gradient(top, rgba(143,5,18,0.8) 0%, rgba(143,5,18,0.8) 100%);
-	background-image: -ms-linear-gradient(top, rgba(143,5,18,0.8) 0%, rgba(143,5,18,0.8) 100%);
-	background-image: -o-linear-gradient(top, rgba(143,5,18,0.8) 0%, rgba(143,5,18,0.8) 100%);
-}
-.flex-active-slide .fusion-image-wrapper .fusion-rollover .fusion-rollover-link,
-.flex-active-slide .fusion-image-wrapper .fusion-rollover .fusion-rollover-gallery {
-	background-color: #000;
-}
+
 .flex-active-slide .fusion-image-wrapper .fusion-rollover .fusion-rollover-content .fusion-rollover-categories a,
 .flex-active-slide .fusion-image-wrapper .fusion-rollover .fusion-rollover-content .fusion-rollover-title a {
-	color: #000;
+	color: #FFF;
 }
 .fusion-post-content .fusion-content-sep {
 	display: none;
