@@ -2,8 +2,6 @@
 	<div id="content" <?php Avada()->layout->add_style( 'content_style' ); ?>>
 		<?php while( have_posts() ): the_post(); ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
-			
-			<h1 class="page-heading"><?php echo rt_replace_color_title_in_archive( get_the_title() );?></h1>
 
 			<div class="cate-caurse">
 			<?php

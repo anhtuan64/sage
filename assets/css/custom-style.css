@@ -4,7 +4,7 @@
 	border-top: none;
 	border-bottom: none;
 }
-.page-heading {
+.entry-title {
 	line-height: 70px;
 	height: 70px;
 	margin-bottom: 35px;
@@ -14,10 +14,10 @@
 	font-weight: bold;
 	text-transform: uppercase;
 }
-.page-heading .first-character {
+.entry-title .first-character {
 	color: #8f0512;
 }
-.page-heading .characters {
+.entry-title .characters {
 	color: #555555;
 }
 
@@ -192,12 +192,6 @@
 
 /* Single course
 --------------------------------------------------- */
-.single-post-k-course .entry-title {
-	display: none;
-}
-.single-post-k-course .page-heading {
-	margin-bottom: 0;
-}
 .single-post-k-course .cate-caurse .cate-ul li {
 	padding-bottom: 0;
 	text-align: center;
