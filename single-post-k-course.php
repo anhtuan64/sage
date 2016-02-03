@@ -12,7 +12,6 @@
 					echo '<ul class="cate-ul">';
 					foreach ( $terms as $term ) :
 						$bgcate = get_field( 'images', 'k-course-category_'.$term->term_id );
-					
 			?>
 				<li> 
 					<span class="img-cate">
