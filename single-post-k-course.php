@@ -7,13 +7,25 @@
 
 			<div class="cate-caurse">
 			<?php
+				$course_terms = get_the_terms( get_the_ID(), 'k-course-category' );
+				$arr_course_id = array();
+				if ( count( $course_terms ) > 0 ) {
+					foreach ( $course_terms as $key => $obj ) {
+						$arr_course_id[] = $obj->term_id;
+					}
+				}
+				// var_dump($course_terms );
 				$terms = get_terms( 'k-course-category', 'orderby=count&hide_empty=0' );
 				if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) :
 					echo '<ul class="cate-ul">';
-					foreach ( $terms as $term ) :
+					foreach ( $terms as $term ) : 
 						$bgcate = get_field( 'images', 'k-course-category_'.$term->term_id );
+						$class = '';
+						if ( in_array( $term->term_id, $arr_course_id ) ) {
+							$class = 'active';
+						}
 			?>
-				<li> 
+				<li class="<?php echo $class;?>">
 					<span class="img-cate">
 						<?php if($bgcate) { ?>
 						<img src="<?php echo $bgcate['url']; ?>" />
@@ -22,6 +34,7 @@
 					<a class="title-cate" href="<?php echo get_term_link( $term->term_id, 'k-course-category'); ?>" title="<?php echo $term->name; ?> ">
 						<?php echo $term->name; ?>
 					</a> 
+					<div class="arrow-up"></div>
 				</li>
 			<?php
 					endforeach;
@@ -102,12 +115,31 @@
 			</div>
 			<div class="course-content">
 				<?php
+					// Trainer
+					$trainer = '';
+					if ( $teacher ) {
+						$trainer .= '<div class="course-teacher">';
+						$trainer .= '<div class="course-teacher-thumb">';
+						if ( has_post_thumbnail( $teacher->ID ) ) {
+							$trainer .= '<a href="'. get_permalink( $teacher->ID ) .'" title="'. $teacher->post_title .'">'. get_the_post_thumbnail( $teacher->ID, 'rt_thumb300x300' ) .'</a>';
+						}
+						$trainer .= '<p class="course-teacher-title"><a href="'. get_permalink( $teacher->ID ) .'" title="'. $teacher->post_title .'">'. $teacher->post_title .'</a></p>';
+						if ( get_field( 'organize', $teacher->ID ) ) {
+							$trainer .= get_field( 'organize', $teacher->ID );
+						}
+						$trainer .= '</div>';
+						$trainer .= '<div class="course-teacher-excerpt">';
+						$trainer .= apply_filters( 'the_content', $teacher->post_excerpt );
+						$trainer .= '</div>';
+						$trainer .= '</div>';
+					}
+					// var_dump($brochure);
 					$shortcodes = '[fusion_tabs design="clean" layout="horizontal" justified="yes" backgroundcolor="" inactivecolor="" bordercolor="" class="" id=""]
 					[fusion_tab title="'. __( 'Course Content', RT_LANGUAGE ) .'" icon=""]'. $course_content .'[/fusion_tab]
 					[fusion_tab title="'. __( 'Benefits of Participation', RT_LANGUAGE ) .'" icon=""]'. $course_benefits .'[/fusion_tab]
 					[fusion_tab title="'. __( 'Who should attend', RT_LANGUAGE ) .'" icon=""]'. $who_course .'[/fusion_tab]
-					[fusion_tab title="'. __( 'Trainer', RT_LANGUAGE ) .'" icon=""]'. $course_content .'[/fusion_tab]
-					[fusion_tab title="'. __( 'Brochure', RT_LANGUAGE ) .'" icon=""][/fusion_tab]
+					[fusion_tab title="'. __( 'Trainer', RT_LANGUAGE ) .'" icon=""]'. $trainer .'[/fusion_tab]
+					[fusion_tab title="'. __( 'Brochure', RT_LANGUAGE ) .'" icon=""]'. '<embed src="'. $brochure .'" width="100%" height="500"></embed>' .'[/fusion_tab]
 					[/fusion_tabs]';
 					echo do_shortcode( $shortcodes );
 				?>

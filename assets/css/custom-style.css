@@ -4,9 +4,6 @@
 	border-top: none;
 	border-bottom: none;
 }
-#wrapper #main {
-	padding-top: 10px;
-}
 .page-heading {
 	line-height: 70px;
 	height: 70px;
@@ -192,10 +189,33 @@
 .page-template .cate-caurse .box-new-relate .list-relate {
 	background: #d34b7a;
 }
+
 /* Single course
 --------------------------------------------------- */
 .single-post-k-course .entry-title {
 	display: none;
+}
+.single-post-k-course .page-heading {
+	margin-bottom: 0;
+}
+.single-post-k-course .cate-caurse .cate-ul li {
+	padding-bottom: 0;
+	text-align: center;
+}
+.single-post-k-course .cate-caurse .cate-ul li .title-cate {
+	text-transform: uppercase;
+}
+.single-post-k-course .cate-caurse .cate-ul li .arrow-up {
+	height: 15px;
+}
+.single-post-k-course .cate-caurse .cate-ul li.active .arrow-up {
+	width: 0; 
+	height: 0; 
+	display: inline-block;
+	vertical-align: bottom;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 15px solid #d97158;
 }
 .single-post-k-course .post-inner {
 	background: #d97158;
@@ -273,6 +293,24 @@
 }
 .single-post-k-course #wrapper .course-content .fusion-tabs.horizontal-tabs.clean .tab-content {
 	margin-top: 30px;
+}
+.single-post-k-course .course-teacher {
+	display: table;
+	width: 100%;
+}
+.single-post-k-course .course-teacher > div {
+	display: table-cell;
+}
+.single-post-k-course .course-teacher .course-teacher-thumb {
+	width: 250px;
+	padding-right: 30px;
+	text-align: center;
+}
+.single-post-k-course .course-teacher .course-teacher-thumb .course-teacher-title {
+	margin-bottom: 5px;
+}
+.single-post-k-course .course-teacher .course-teacher-thumb .course-teacher-title a {
+	font-size: 18px;
 }
 
 /* Footer
