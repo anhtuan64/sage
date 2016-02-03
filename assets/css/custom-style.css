@@ -4,20 +4,20 @@
 	border-top: none;
 	border-bottom: none;
 }
-.entry-title {
+h1.entry-title {
 	line-height: 70px;
 	height: 70px;
 	margin-bottom: 35px;
-	margin-top: 0px;
+	margin-top: 15px;
 	border-bottom: 1px solid #dcdcdc;
 	font-size: 30px;
 	font-weight: bold;
 	text-transform: uppercase;
 }
-.entry-title .first-character {
+h1.entry-title .first-character {
 	color: #8f0512;
 }
-.entry-title .characters {
+h1.entry-title .characters {
 	color: #555555;
 }
 
@@ -55,22 +55,28 @@
 
 /* page course 
 -------------------------------------------------- */
+.page-template-list-course #main > .fusion-row {
+	margin-bottom: 25px;
+}
 /* taxonomy  */
-.cate-caurse .cate-ul, .cate-caurse .box-new-relate .list-relate {
+.cate-caurse .cate-ul, 
+.cate-caurse .box-new-relate .list-relate {
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
 }
+.cate-caurse .box-new-relate .list-relate,
 .cate-caurse .cate-ul li {
 	width: 29%;
-	padding: 15px 0 20px;
+	padding: 0px 0 20px;
+	margin: 0 76px 0 0;
 	float: left;
 	position: relative;
 	list-style: none;
 	text-align: center;
-	margin: 0 76px 0 0;
 }
-.cate-caurse .cate-ul li:nth-child(3n), .cate-caurse .box-new-relate .list-relate:nth-child(3n) {
+.cate-caurse .cate-ul li:nth-child(3n), 
+.cate-caurse .box-new-relate .list-relate:nth-child(3n) {
 	margin-right: 0;
 }
 .cate-caurse .cate-ul li:after {
@@ -78,7 +84,7 @@
 	font: normal normal normal 14px/1 FontAwesome;
 	display: block;
 	position: absolute;
-	top: 110px;
+	top: 70px;
 	right: -57px;
 	width: 40px;
 	height: 40px;
@@ -94,7 +100,7 @@
 }
 .cate-caurse .cate-ul li .img-cate {
 	display: block;
-	height: 190px;
+	height: 160px;
 	position: relative;
 	padding: 0 37px;
 }
@@ -134,13 +140,15 @@
 	overflow: hidden;
 	padding: 9px 15px 0;
 }
-.cate-caurse .cate-ul li .post-cate .post-list img, .cate-caurse .box-new-relate .list-relate a.img img {
+.cate-caurse .cate-ul li .post-cate .post-list img, 
+.cate-caurse .box-new-relate .list-relate a.img img {
 	width: 92px;
 	border: 2px solid #fff;
 	float: left;
 	margin:5px 15px 0 0;
 }
-.cate-caurse .cate-ul li .post-cate .post-list .title-post, .cate-caurse .box-new-relate .list-relate .title-post {
+.cate-caurse .cate-ul li .post-cate .post-list .title-post, 
+.cate-caurse .box-new-relate .list-relate .title-post {
 	color: #ffffff;
 	font-weight: bold;
 	text-align: left;
@@ -150,7 +158,8 @@
 	height: 20px;
 	overflow: hidden;
 }
-.cate-caurse .cate-ul li .post-cate .post-list .excerpt-content, .cate-caurse .box-new-relate .list-relate .excerpt-content  {
+.cate-caurse .cate-ul li .post-cate .post-list .excerpt-content, 
+.cate-caurse .box-new-relate .list-relate .excerpt-content  {
 	float: left;
 	color: #ffddd5;
 	text-align: left;
@@ -158,9 +167,11 @@
 	margin: 0;
 	font-size: 12px;
 }
-.cate-caurse .cate-ul li .post-cate .post-list .excerpt-content a.read-more, .cate-caurse .box-new-relate .list-relate .excerpt-content a.read-more {
+.cate-caurse .cate-ul li .post-cate .post-list .excerpt-content a.read-more, 
+.cate-caurse .box-new-relate .list-relate .excerpt-content a.read-more {
 	color: #ffddd5;
 	font-size: 12px;
+	font-style: italic;
 }
 .cate-caurse .cate-ul li:nth-child(3n+2) .post-cate .post-list .excerpt-content,
 .cate-caurse .cate-ul li:nth-child(3n+2) .post-cate .post-list .excerpt-content a.read-more  {
@@ -177,16 +188,9 @@
 	padding-bottom: 15px;
 }
 .cate-caurse .box-new-relate .list-relate {
-	width: 29%;
 	padding: 15px 15px 0px;
-	float: left;
-	position: relative;
-	list-style: none;
-	text-align: center;
-	margin: 0 76px 0 0;
-	background: #5d020b
 }
-.page-template .cate-caurse .box-new-relate .list-relate {
+.page-template-list-course .cate-caurse .box-new-relate .list-relate {
 	background: #d34b7a;
 }
 

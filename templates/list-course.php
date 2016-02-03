@@ -10,10 +10,10 @@
 get_header(); ?>
 <div class="cate-caurse">
 		<?php
-			$categories = get_terms( 'k-course-category', 'orderby=count&hide_empty=0' );
-			if ( ! empty( $categories ) && ! is_wp_error( $categories ) ){
+			$terms = get_terms( 'k-course-category', 'orderby=count&hide_empty=0' );
+			if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
 				echo '<ul class="cate-ul">';
-				foreach ( $categories as $term ) {
+				foreach ( $terms as $term ) {
 				$bgcate = get_field( 'images', 'k-course-category_'.$term->term_id );
 				
 		?>
@@ -24,9 +24,9 @@ get_header(); ?>
 							<?php } ?>
 						</span>
 						
-						<a class="title-cate" href="<?php echo get_term_link( $term->term_id, 'k-course-category'); ?>" title="<?php echo $term->name; ?> ">
+						<span class="title-cate" title="<?php echo $term->name; ?> ">
 							<?php echo $term->name; ?>
-						</a> 
+						</span> 
 						<div class="post-cate">
 							<?php 
 								 $args = array (
@@ -52,7 +52,7 @@ get_header(); ?>
 								<a class="title-post" href="<?php the_permalink();?>" title="<?php the_title();?>"><?php echo the_title();?></a>
 								<div class="excerpt-content">
 								   <?php echo substr(get_the_excerpt(), 0,80); ?>
-								   <a class="read-more" href="<?php the_permalink();?>" title="<?php the_title();?>"><?php echo __( '... Xem chi tiết: ', rt_language ) ?></a>
+								   <a class="read-more" href="<?php the_permalink();?>" title="<?php the_title();?>"><?php echo __( '... Readmore ', RT_LANGUAGE ) ?></a>
 							   </div>
 							</div>
 							<?php
@@ -69,7 +69,7 @@ get_header(); ?>
 			<?php 
 				$x = 0;
 				$id = "";
-				foreach ($categories as $key) {
+				foreach ($terms as $key) {
 					$x++;
 					if ( $x==3 ) {
 						$id = $key->term_id;
@@ -99,7 +99,7 @@ get_header(); ?>
 					<a class="title-post" href="<?php the_permalink();?>" title="<?php the_title();?>"><?php echo the_title();?></a>
 					<div class="excerpt-content">
 					   <?php echo substr(get_the_excerpt(), 0,80); ?>
-					   <a class="read-more" href="<?php the_permalink();?>" title="<?php the_title();?>"><?php echo __( '... Xem chi tiết: ', rt_language ) ?></a>
+					   <a class="read-more" href="<?php the_permalink();?>" title="<?php the_title();?>"><?php echo __( '... Readmore ', RT_LANGUAGE ) ?></a>
 					</div>
 				</div>
 			<?php

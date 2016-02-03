@@ -26,12 +26,12 @@
 				<li class="<?php echo $class;?>">
 					<span class="img-cate">
 						<?php if($bgcate) { ?>
-						<img src="<?php echo $bgcate['url']; ?>" />
-						<?php } ?> 
+							<img src="<?php echo $bgcate['url']; ?>" alt="" /> 
+						<?php } ?>
 					</span>
-					<a class="title-cate" href="<?php echo get_term_link( $term->term_id, 'k-course-category'); ?>" title="<?php echo $term->name; ?> ">
+					<span class="title-cate" title="<?php echo $term->name; ?> ">
 						<?php echo $term->name; ?>
-					</a> 
+					</span> 
 					<div class="arrow-up"></div>
 				</li>
 			<?php
