@@ -62,6 +62,10 @@ function theme_enqueue_styles() {
 	wp_enqueue_script( 'rt-main', RT_THEME_URL . 'assets/js/main.js', array(), '1.0', true );
 	wp_localize_script( 'rt-main', 'ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 
+	// Enqueue register
+	if (is_page()) {
+		wp_enqueue_script( 'rt-page-register', RT_THEME_URL . 'assets/js/page-register.js', array(), '1.0', true );
+	}
 	// Localize script
 	$AvadaParams = array();
 	if ( isset( $smof_data['offcanvas-swipe'] ) && $smof_data['offcanvas-swipe'] ) {

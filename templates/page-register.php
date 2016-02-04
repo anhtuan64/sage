@@ -12,7 +12,7 @@ get_header();
 <h1 class="page-heading"><?php echo rt_replace_color_title_in_archive( get_the_title() );?></h1>
 <div class="page-register"> 
 	<h4> <?php echo __( 'Enroll now', RT_LANGUAGE ) ?> </h4>
-	
+<form action="" method="post">
 	<div class="box-science course-information">
 		<h3> <?php echo __( 'Course Information', RT_LANGUAGE ) ?> </h3>
 		<?php 
@@ -66,7 +66,8 @@ get_header();
 		</ul>
 	</div> <!-- end Course Information -->
 
-	<div class="box-science student-information">
+<div class="student-information">
+	<div class="box-science">
 		<h3> <?php echo __( 'Student information', RT_LANGUAGE ) ?> </h3>
 		<?php 
 			$specialize_register = get_field( "specialize_register", get_the_ID() );
@@ -132,7 +133,8 @@ get_header();
 				</span>
 			</li><!-- end Specialize  -->
 		</ul>
-	</div> <!-- end Student information -->
+	</div>
+</div> <!-- end Student information -->
 
 	<div class="box-science more-information">
 		<h3> <?php echo __( 'Student information', RT_LANGUAGE ) ?> </h3>
@@ -171,9 +173,18 @@ get_header();
 			</li><!-- end You know what courses through sources  -->
 		</ul>
 	</div> <!-- end More information -->
+
 	<div class="button-register"> 
 		<input class="button small" type="submit" name="register_submit" value="<?php echo __( ' Register ', RT_LANGUAGE ) ?>" />
 		<a id="register_user_addmore" class="button navy small" href="#"><?php echo __( ' Plus subscribers ', RT_LANGUAGE ) ?></a>
 	</div>
-</div>
+
+</form>
+</div> <!-- page-register -->
+<?php
+if(isset($_POST['science-name'])){
+    $select1 = $_POST['science-name'];
+    var_dump($select1);
+}
+?>
 <?php get_footer();
