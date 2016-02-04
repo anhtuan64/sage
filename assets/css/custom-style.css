@@ -318,24 +318,26 @@ h1.entry-title .characters {
 	position: relative;
 }
 .informations-contact p {
-	margin-bottom: 3px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	line-height: 30px;
 }
 .informations-contact p span {
 	line-height: 30px;
 }
-.informations-contact p span .fa {
+.informations-contact .fa {
 	margin-right: 10px;
 	width: 14px;
 }
 .informations-contact .fusion-social-links {
-	margin-top: 88px;
+	margin-top: 96px;
 }
 .fusion-fullwidth-2 {
 	position: relative;
 }
 #copyright {
-    margin-top: -120px !important;
-    text-indent: 80px;
+    margin-top: -128px !important;
+    text-indent: 120px;
 }
 
 /* Shortcodes
@@ -344,9 +346,12 @@ h1.entry-title .characters {
 .fusion-content-boxes {
 	margin-bottom: 0 !important;
 }
+.fusion-column-wrapper .fusion-content-boxes .fusion-column {
+	margin-bottom: 12px;
+}
 .fusion-content-boxes .content-box-column .content-wrapper .heading {
 	width: 100%;
-	margin-bottom: 7px;
+	margin-bottom: 2px;
 }
 .fusion-content-boxes .content-box-column .content-wrapper .heading > * {
 	display: block;
@@ -354,7 +359,7 @@ h1.entry-title .characters {
 	width: 100%;
 }
 .fusion-content-boxes .content-box-column .content-wrapper .heading > .image {
-	margin-bottom: 42px;
+	margin-bottom: 32px;
 }
 .fusion-content-boxes .content-box-column .content-wrapper .heading > .image > img {
 	margin: 0;
@@ -453,7 +458,7 @@ h1.entry-title .characters {
 }
 .newsletter {
 	display: table;
-	margin: 5px auto 0;
+	margin: 5px auto 5px;
 }
 .newsletter form p {
 	display: inline-block;
@@ -476,4 +481,9 @@ h1.entry-title .characters {
 	text-transform: uppercase;
 	text-align: center;
 	border: none;
+}
+
+
+#introduce-home p {
+	margin-bottom: 0px;
 }
