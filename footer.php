@@ -12,6 +12,11 @@
 						if ( ! empty( $page[0]->post_content ) ) {
 							echo do_shortcode( $page[0]->post_content );
 						}
+
+						// Custom CSS
+						if ( get_field( 'custom_css', get_the_ID() ) ) {
+							echo trim( get_field( 'custom_css', get_the_ID() ) );
+						}
 					?>
 				</div>
 			</div>  <!-- #main -->

@@ -393,7 +393,14 @@ h1.entry-title .characters {
 .fusion-column-wrapper .fusion-testimonials.clean .company-name strong {
 	color: #8f0512;
 }
+
 /* Blog */
+.fusion-blog-layout-grid.fusion-blog-layout-grid-5 .grid-sizer {
+	width: 20%;
+}
+.fusion-blog-layout-grid.fusion-blog-layout-grid-5 .post-size-big {
+	width: 40% !important;
+}
 .fusion-blog-layout-grid > .fusion-post-grid > .fusion-post-wrapper,
 .fusion-blog-layout-grid > .fusion-post-grid > .fusion-post-wrapper > .fusion-flexslider {
 	border: 0;
@@ -414,7 +421,6 @@ h1.entry-title .characters {
 #wrapper #main .fusion-blog-layout-grid > .fusion-post-grid > .fusion-post-wrapper > .fusion-post-content-wrapper .fusion-meta-info {
 	display: none;
 }
-
 .flex-active-slide .fusion-image-wrapper .fusion-rollover .fusion-rollover-content .fusion-rollover-categories a,
 .flex-active-slide .fusion-image-wrapper .fusion-rollover .fusion-rollover-content .fusion-rollover-title a {
 	color: #FFF;
