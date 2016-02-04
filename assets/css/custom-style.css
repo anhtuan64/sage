@@ -20,6 +20,9 @@ h1.entry-title .first-character {
 h1.entry-title .characters {
 	color: #555555;
 }
+#introduce-home p {
+	margin-bottom: 0px;
+}
 
 /* Header
 --------------------------------------------------- */
@@ -489,7 +492,76 @@ h1.entry-title .characters {
 	border: none;
 }
 
-
-#introduce-home p {
-	margin-bottom: 0px;
+/* page register
+-------------------------------------------- */
+/* custom h3 h4 */ 
+.page-register h4 {
+    font-size: 25px;
+    color: #003770;
+    text-transform: uppercase;
+    margin: 40px 0px 10px;
+    position: relative;
+    padding-bottom: 6px;
+    font-weight: 700;
 }
+.page-register h3 {
+	font-size: 20px;
+    color: #EE7D00;
+    font-weight: 400;
+    margin: 0;
+}
+/* custom ul */
+.page-register .box-science ul {
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+.page-register .box-science ul li {
+	margin: 20px 0;
+	list-style: none;
+}
+.page-register .box-science ul li span.left {
+	display: inline-block;
+	width: 200px;
+	float: left;
+	font-size: 16px;
+	line-height: 36px;
+}
+.page-register .box-science ul li span.right select, .page-register .box-science ul li span.right input {
+	color: #333;
+	width: 220px;
+	height: 36px;
+	border: 1px solid #ccc;
+}
+.page-register .box-science ul li span.right input {
+	padding-left: 4px;
+}
+.page-register .more-information ul li:first-child span.left {
+	line-height: 20px;
+}
+.page-register .button-register input{
+    display: inline-block;
+    color: #FFF;
+    background-color: #ee7d00;
+    padding: 15px 35px;
+    border-radius: 4px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    float: left;
+    margin-right: 10px;
+}
+.page-register .button-register a.button {
+	display: inline-block;
+	color: #FFF;
+    background-color: #003770;
+    padding: 15px 35px;
+    border-radius: 4px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+
+}
+
