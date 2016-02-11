@@ -322,15 +322,20 @@ h1.entry-title .characters {
 }
 .informations-contact p {
 	margin-top: 0px;
-	margin-bottom: 0px;
+	margin-bottom: 1px;
 	line-height: 30px;
 }
 .informations-contact p span {
 	line-height: 30px;
 }
 .informations-contact .fa {
-	margin-right: 10px;
-	width: 14px;
+	float: left;
+	display: block;
+	font-size: 18px;
+    margin-right: 15px;
+    width: 18px;
+    line-height: 31px;
+    text-align: center;
 }
 .informations-contact .fusion-social-links {
 	margin-top: 96px;
@@ -439,6 +444,34 @@ h1.entry-title .characters {
 }
 #content .post .post-content {
 	color: #555555;
+}
+
+/* Teacher */
+.fusion-posts-teacher {
+    margin-left: -25px;
+    margin-right: -25px;
+}
+.fusion-posts-teacher .fusion-post-grid {
+	padding: 10px 25px 15px 25px;
+}
+.fusion-posts-teacher .entry-title {
+	margin-top: 15px;
+	margin-bottom: 3px;
+}
+.fusion-posts-teacher .entry-title a {
+	color: #FFF;
+	font-size: 18px;
+}
+.fusion-posts-teacher .entry-manifesto p {
+	color: #FFF;
+	margin-bottom: 0;
+	font-style: italic;
+}
+
+/* Social Network */
+.tooltip.top {
+	padding: 0;
+	border-radius: 5px;
 }
 
 /* Third Party 
@@ -562,6 +595,4 @@ h1.entry-title .characters {
     font-size: 16px;
     cursor: pointer;
     text-align: center;
-
 }
-
