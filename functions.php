@@ -69,6 +69,7 @@ function theme_enqueue_styles() {
 	}
 	// Localize script
 	$AvadaParams = array();
+	$AvadaParams['ajaxurl'] = admin_url( 'admin-ajax.php' );
 	if ( isset( $smof_data['offcanvas-swipe'] ) && $smof_data['offcanvas-swipe'] ) {
 		$AvadaParams['offcanvas_turnon'] = $smof_data['offcanvas-turnon'];
 	}

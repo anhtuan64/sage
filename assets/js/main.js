@@ -116,6 +116,86 @@
 				});
 			});
 		}
+
+		$('.register-form').submit(function () {
+			var course = $('.course', $(this)).val(),
+				where_source_course = $('.where_source_course', $(this)).val(),
+				payment_type = $('.payment_type', $(this)).val();
+
+			if ( course == null || course == 'undefined' || course == '' ) {
+				$('.acf-error-message',  $(this)).html('Course not null');
+				return false;
+			}
+			if ( where_source_course == null || where_source_course == 'undefined' || where_source_course == '' ) {
+				$('.acf-error-message',  $(this)).html('You know what courses through sources not null');
+				return false;
+			}
+			if ( payment_type == null || payment_type == 'undefined' || payment_type == '' ) {
+				$('.acf-error-message',  $(this)).html('Payment type not null');
+				return false;
+			}
+		});
 			  
 	});
 }(jQuery);
+
+/*  [ Page Register: Course Selected ]
+- - - - - - - - - - - - - - - - - - - - */
+function course_selected( obj ) {
+	var $ = jQuery,
+	parent = obj.parent().parent().parent(),
+	course_id = $( 'option:selected', obj ).val();
+
+	if ( course_id != null && course_id != 'undefined' && course_id != '' ) {
+		// console.log( course_id );
+		$.ajax({
+			type: "GET",
+			url: AvadaParams.ajaxurl,
+			// dataType: 'JSON',
+			data: ({ action: 'rt_load_meta_data_of_course', id: course_id}),
+			success: function(data){
+				// console.log(data);
+				if ( data.length > 0 ) {
+					var data_parsed = $.parseJSON(data);
+					var adress_html = '',
+						opening_html = '';
+					if ( data_parsed.adress.length > 0 ) {
+						var adress_parsed = $.parseJSON(data_parsed.adress);
+						if ( adress_parsed && adress_parsed !== "null" && adress_parsed !== "undefined" ) {
+							for ( var adress in adress_parsed ) {
+								adress_html += '<option value="'+ adress_parsed[adress]['name'] +'">'+ adress_parsed[adress]['name'] +'</option>';
+							}
+							$( '.adress', parent ).html( adress_html );
+						}
+						
+					}
+					if ( data_parsed.opening.length > 0 ) {
+						var opening_parsed = $.parseJSON(data_parsed.opening);
+						if ( opening_parsed && opening_parsed !== "null" && opening_parsed !== "undefined" ) {
+							for ( var opening in opening_parsed ) {
+								opening_html += '<option value="'+ opening_parsed[opening]['date'] +'">'+ opening_parsed[opening]['date'] +'</option>';
+							}
+							$( '.date', parent ).html( opening_html );
+						}
+						
+					}
+				} else {
+					$( '.adress', parent ).html( '' );
+					$( '.date', parent ).html( '' );
+				}
+			}
+		});
+	} else {
+		$( '.adress', parent ).html( '' );
+		$( '.date', parent ).html( '' );
+	}
+	
+	// console.log(obj);
+}
+
+
+
+
+
+
+
