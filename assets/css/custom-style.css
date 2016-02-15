@@ -59,9 +59,12 @@ h1.entry-title .characters {
 
 /* Archive Page
 --------------------------------------------------- */
+.fusion-blog-shortcode  .fusion-blog-layout-grid-5 .fusion-rollover-content,
 .post-size-small .fusion-rollover-content {
 	padding: 36px 20px 20px 20px;
 }
+.fusion-blog-shortcode .fusion-blog-layout-grid-5 .fusion-rollover-title a,
+.fusion-blog-shortcode .fusion-blog-layout-grid-5 .fusion-rollover-categories a,
 .post-size-small .fusion-rollover-title a,
 .post-size-small .fusion-rollover-categories a {
 	display: none;
@@ -206,13 +209,12 @@ h1.entry-title .characters {
 	color: #ffddd5;
 	text-align: left;
 	width: 61%;
-	height: 40px;
+	max-height: 50px;
 	margin: 0;
 	font-size: 12px;
 	overflow: hidden;
 }
-
-.cate-caurse .cate-ul li .post-cate .post-list .excerpt-content a.read-more, 
+.cate-caurse .cate-ul li .post-cate .post-list a.read-more, 
 .cate-caurse .box-new-relate .list-relate a.read-more {
 	color: #ffddd5;
 	font-size: 12px;
@@ -603,14 +605,14 @@ h1.entry-title .characters {
 }
 .page-register .box-science ul li span.left {
 	display: inline-block;
-	width: 200px;
+	width: 230px;
 	float: left;
 	font-size: 16px;
 	line-height: 36px;
 }
 .page-register .box-science ul li span.right select, .page-register .box-science ul li span.right input {
 	color: #333;
-	width: 220px;
+	width: 300px;
 	height: 36px;
 	border: 1px solid #ccc;
 }
@@ -645,6 +647,7 @@ h1.entry-title .characters {
     float: left;
     margin-right: 10px;
 }
+
 /*  single post k teacher
 --------------------------------*/
 /* post-meta */

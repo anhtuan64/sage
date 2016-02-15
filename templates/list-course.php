@@ -51,9 +51,9 @@ get_header(); ?>
 								</a>
 								<a class="title-post" href="<?php the_permalink();?>" title="<?php the_title();?>"><?php echo the_title();?></a>
 								<div class="excerpt-content">
-								   <?php echo get_the_excerpt(); ?>
-								   <a class="read-more" href="<?php the_permalink();?>" title="<?php the_title();?>"><?php echo __( 'Readmore', RT_LANGUAGE ) ?></a>
+									<?php echo get_the_excerpt(); ?>
 							   </div>
+							   <a class="read-more" href="<?php the_permalink();?>" title="<?php the_title();?>"><?php echo __( 'Readmore', RT_LANGUAGE ) ?></a>
 							</div>
 							<?php
 								endwhile; wp_reset_postdata(); 
@@ -99,9 +99,9 @@ get_header(); ?>
 					</a>
 					<a class="title-post" href="<?php the_permalink();?>" title="<?php the_title();?>"><?php echo the_title();?></a>
 					<div class="excerpt-content">
-					   <?php echo get_the_excerpt(); ?>
-					   <a class="read-more" href="<?php the_permalink();?>" title="<?php the_title();?>"><?php echo __( 'Readmore', RT_LANGUAGE ) ?></a>
+						<?php echo get_the_excerpt(); ?>
 					</div>
+					<a class="read-more" href="<?php the_permalink();?>" title="<?php the_title();?>"><?php echo __( 'Readmore', RT_LANGUAGE ) ?></a>
 				</div>
 			<?php
 				endwhile; wp_reset_postdata(); 
