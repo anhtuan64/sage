@@ -27,7 +27,7 @@ h1.entry-title .characters {
 /* Header
 --------------------------------------------------- */
 .fusion-header-wrapper .fusion-header {
-	background-color: #8f0512;
+	background-color: #da2128;
 }
 
 /* Main Menu
@@ -520,6 +520,9 @@ h1.entry-title .characters {
 	padding: 0;
 	border-radius: 5px;
 }
+.fusion-social-networks .fusion-social-network-icon {
+	font-size: 18px;
+}
 
 /* Third Party 
 --------------------------------------------------- */
@@ -528,7 +531,7 @@ h1.entry-title .characters {
 	margin-bottom: 25px;
 }
 .fusion-column-wrapper .wpcf7-form .wpcf7-text {
-	height: 50px;
+	height: 40px;
 }
 .fusion-column-wrapper .wpcf7-form .wpcf7-textarea {
 	height: 110px;
