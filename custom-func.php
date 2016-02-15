@@ -68,8 +68,7 @@ if( ! function_exists( 'rt_register_custom_post_type' ) ) {
  */
 if ( ! function_exists( 'shortcode_post_teacher' ) ) {
 	function shortcode_post_teacher( $atts , $content ) {
-		$html = '';
-		$html .= '<div class="fusion-posts-teacher fusion-blog-layout-grid fusion-blog-layout-grid-4 isotope">';
+		$html = '<div class="tribe-events"><div class="fusion-posts-teacher fusion-blog-layout-grid fusion-blog-layout-grid-4 isotope">';
 		
 		$args = array(
 			'post_type'  			=> 'post-k-teacher',
@@ -79,7 +78,7 @@ if ( ! function_exists( 'shortcode_post_teacher' ) ) {
 		$the_query = new WP_Query( $args );
 		while( $the_query -> have_posts() ):
 			$the_query -> the_post();
-			$html .= '<article id="post-'. get_the_ID() .'" class="fusion-post-grid '. implode( ' ', get_post_class( $post_class ) ) .'"><div class="post-inner">';
+			$html .= '<article id="post-'. get_the_ID() .'" class="'. implode( ' ', get_post_class( 'post fusion-post-grid' ) ) .'"><div class="post-inner">';
 			if ( has_post_thumbnail() ) :
 				$html .= '<div class="entry-thumb">';
 				$html .= '<a href="'. get_permalink() .'" title="'. get_the_title() .'">' . get_the_post_thumbnail( get_the_ID(), 'rt_thumb255x275' ) . '</a>';
@@ -96,7 +95,7 @@ if ( ! function_exists( 'shortcode_post_teacher' ) ) {
 			endif;
 			$html .= '</div></article>';
 		endwhile;
-		$html .= '</div>';
+		$html .= '</div></div>';
 		return $html;
 	}
 	add_shortcode( 'shortcode_post_teacher' , 'shortcode_post_teacher' );
