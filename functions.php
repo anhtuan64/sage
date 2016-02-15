@@ -10,6 +10,7 @@ define( 'RT_LANGUAGE', 'rt_language' );
  *
  */
 require_once( 'custom-func.php' );
+require_once( 'framework/custom-fields.php' );
 require_once( 'framework/func.php' );
 require_once( 'mce/mce.php' );
 require_once( 'woocommerce/func-woocommerce.php' );
