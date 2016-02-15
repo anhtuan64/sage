@@ -573,6 +573,9 @@ h1.entry-title .characters {
 /* page register
 -------------------------------------------- */
 /* custom h3 h4 */ 
+.page-register {
+	margin-bottom: 20px;
+}
 .page-register h4 {
 	font-size: 25px;
 	color: #003770;
