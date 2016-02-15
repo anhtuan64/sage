@@ -59,15 +59,15 @@ function theme_enqueue_styles() {
 	/*-----------------------------------------------------------------*/
 	wp_register_script( 'owl-carousel', RT_THEME_URL . 'assets/js/third-party/owl-carousel/owl.carousel.min.js', array(), '1.0', true );
 	wp_register_script( 'magnific-popup', RT_THEME_URL . 'assets/js/third-party/jquery.magnific-popup.min.js', array(), '1.0', true );
+	
+	// Enqueue register
+	wp_register_script( 'rt-page-register', RT_THEME_URL . 'assets/js/page-register.js', array(), '1.0', true );
 
 	// Enqueue RT Script
 	wp_enqueue_script( 'rt-main', RT_THEME_URL . 'assets/js/main.js', array(), '1.0', true );
 	wp_localize_script( 'rt-main', 'ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 
-	// Enqueue register
-	if (is_page()) {
-		wp_enqueue_script( 'rt-page-register', RT_THEME_URL . 'assets/js/page-register.js', array(), '1.0', true );
-	}
+
 	// Localize script
 	$AvadaParams = array();
 	$AvadaParams['ajaxurl'] = admin_url( 'admin-ajax.php' );
