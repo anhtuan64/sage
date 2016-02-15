@@ -10,7 +10,7 @@
 get_header(); ?>
 <div class="cate-caurse">
 		<?php
-			$terms = get_terms( 'k-course-category', 'orderby=count&hide_empty=0' );
+			$terms = get_terms( 'k-course-category', 'hide_empty=0' );
 			if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
 				echo '<ul class="cate-ul">';
 				foreach ( $terms as $term ) {
@@ -51,8 +51,8 @@ get_header(); ?>
 								</a>
 								<a class="title-post" href="<?php the_permalink();?>" title="<?php the_title();?>"><?php echo the_title();?></a>
 								<div class="excerpt-content">
-								   <?php echo substr(get_the_excerpt(), 0,80); ?>
-								   <a class="read-more" href="<?php the_permalink();?>" title="<?php the_title();?>"><?php echo __( '... Readmore ', RT_LANGUAGE ) ?></a>
+								   <?php echo get_the_excerpt(); ?>
+								   <a class="read-more" href="<?php the_permalink();?>" title="<?php the_title();?>"><?php echo __( 'Readmore', RT_LANGUAGE ) ?></a>
 							   </div>
 							</div>
 							<?php
@@ -99,8 +99,8 @@ get_header(); ?>
 					</a>
 					<a class="title-post" href="<?php the_permalink();?>" title="<?php the_title();?>"><?php echo the_title();?></a>
 					<div class="excerpt-content">
-					   <?php echo substr(get_the_excerpt(), 0,80); ?>
-					   <a class="read-more" href="<?php the_permalink();?>" title="<?php the_title();?>"><?php echo __( '... Readmore ', RT_LANGUAGE ) ?></a>
+					   <?php echo get_the_excerpt(); ?>
+					   <a class="read-more" href="<?php the_permalink();?>" title="<?php the_title();?>"><?php echo __( 'Readmore', RT_LANGUAGE ) ?></a>
 					</div>
 				</div>
 			<?php

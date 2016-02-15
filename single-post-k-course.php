@@ -13,7 +13,7 @@
 					}
 				}
 				// var_dump($course_terms );
-				$terms = get_terms( 'k-course-category', 'orderby=count&hide_empty=0' );
+				$terms = get_terms( 'k-course-category', 'hide_empty=0' );
 				if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) :
 					echo '<ul class="cate-ul">';
 					foreach ( $terms as $term ) : 
