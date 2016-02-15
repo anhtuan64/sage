@@ -6,7 +6,12 @@
 				<?php if(has_post_thumbnail()) the_post_thumbnail("medium",array("alt" => get_the_title()));
 	            else echo $no_thum; ?>
 				<p class="title-name"> <?php the_title(); ?> </p>
-				<p class="excerpt-meta"><?php echo substr(get_the_excerpt(), 0,110); ?> </p>
+				<?php 
+					$manifesto = get_field('manifesto');
+					if (!empty($manifesto)) :
+				 ?>
+				<p class="excerpt-meta"><?php echo $manifesto; ?> </p>
+				<?php endif; ?>
 			</div>
 			<div class="post-inner">
 				<p class="title-name"> <?php the_title(); ?> </p>
@@ -28,9 +33,6 @@
 						if ( ( $i % 2 == 0 ) ) {
 							echo "<div class='box-relate'>";
 						}
-						// if ( ($i%2==0) ) {
-						// 	echo "<div class='box-relate'>";
-						// }
 					?>
 						<div class="list-relate">
 							<a class="img" href="<?php echo $link; ?>">

@@ -79,6 +79,7 @@ get_header(); ?>
 				 $args2 = array (
 					'post_type'              => 'post-k-course',
 					'posts_per_page'         =>6,
+					'offset' => 2,
 					'tax_query' => array(
 						array(
 									'taxonomy' => 'k-course-category',
