@@ -10,7 +10,8 @@
 <?php get_header(); ?>
 	<div id="content" <?php Avada()->layout->add_style( 'content_style' ); ?>>
 		<?php
-		while( have_posts() ): the_post();
+			wp_enqueue_script( 'rt-page-register' );
+			while( have_posts() ): the_post();
 		?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<?php echo avada_render_rich_snippets_for_pages(); ?>
