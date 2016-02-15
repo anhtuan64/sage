@@ -64,7 +64,7 @@ if ( is_search() &&
 	$number_of_pages = $wp_query->max_num_pages;
 }
 
-echo sprintf( '<div id="posts-container" class="%sfusion-blog-archive fusion-clearfix" data-pages="%s">', $container_class, $number_of_pages );
+echo sprintf( '<div id="posts-container" class="fusion-blog-layout-grid fusion-blog-layout-grid-3 isotope fusion-blog-pagination fusion-blog-archive fusion-clearfix" data-pages="%s">', $container_class, $number_of_pages );
 
 	if( $blog_layout == 'timeline' ) {
 		// Initialize the time stamps for timeline month/year check
