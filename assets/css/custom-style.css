@@ -195,23 +195,30 @@ h1.entry-title .characters {
 	float: left;
 	color: #ffddd5;
 	text-align: left;
-	width: 65%;
+	width: 61%;
+	height: 40px;
 	margin: 0;
 	font-size: 12px;
+	overflow: hidden;
 }
+
 .cate-caurse .cate-ul li .post-cate .post-list .excerpt-content a.read-more, 
-.cate-caurse .box-new-relate .list-relate .excerpt-content a.read-more {
+.cate-caurse .box-new-relate .list-relate a.read-more {
 	color: #ffddd5;
 	font-size: 12px;
 	font-style: italic;
 }
 .cate-caurse .cate-ul li:nth-child(3n+2) .post-cate .post-list .excerpt-content,
-.cate-caurse .cate-ul li:nth-child(3n+2) .post-cate .post-list .excerpt-content a.read-more  {
+.cate-caurse .cate-ul li:nth-child(3n+2) .post-cate .post-list a.read-more  {
 	color: #bcc2ca;
 }
 .cate-caurse .cate-ul li:nth-child(3n) .post-cate .post-list .excerpt-content,
-.cate-caurse .cate-ul li:nth-child(3n) .post-cate .post-list .excerpt-content a.read-more  {
+.cate-caurse .cate-ul li:nth-child(3n) .post-cate .post-list a.read-more  {
 	color: #ffc8db;
+}
+.cate-caurse .cate-ul li .post-cate .post-list a.read-more, .cate-caurse .box-new-relate .list-relate a.read-more {
+	float: left;
+	color: #ffddd5;
 }
 .cate-caurse .box-new-relate {
 	background: #d34b7a;
