@@ -86,7 +86,7 @@ if ( ! function_exists( 'shortcode_post_teacher' ) ) {
 			endif;
 			$html .= '<h3 class="entry-title"><a href="'. get_permalink() .'" title="'. get_the_title() .'">'. get_the_title() .'</a></h3>';
 			if ( function_exists( 'get_field' ) ) :      
-				$manifesto = get_field ('manifesto');
+				$manifesto = get_field ( 'manifesto' );
 				if( ! empty( $manifesto ) ) :
 					$html .= '<div class="entry-manifesto">';
 					$html .= $manifesto;

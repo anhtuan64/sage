@@ -57,6 +57,16 @@ h1.entry-title .characters {
 	border-bottom: none;
 }
 
+/* Archive Page
+--------------------------------------------------- */
+.post-size-small .fusion-rollover-content {
+	padding: 36px 20px 20px 20px;
+}
+.post-size-small .fusion-rollover-title a,
+.post-size-small .fusion-rollover-categories a {
+	display: none;
+}
+
 /* Taxonomy event
 --------------------------------------------------- */
 .tax-k-event-category h1.entry-title {
