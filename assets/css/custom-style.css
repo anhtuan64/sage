@@ -565,7 +565,7 @@ h1.entry-title .characters {
 	font-size: 18px;
 }
 .newsletter-submit {
-	background: #8f0512;
+	background: #da2128;
 	width: 170px;
 	height: 50px;
 	color: #FFF;
@@ -573,6 +573,7 @@ h1.entry-title .characters {
 	text-transform: uppercase;
 	text-align: center;
 	border: none;
+	cursor: pointer;
 }
 
 /* page register
