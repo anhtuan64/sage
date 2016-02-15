@@ -147,7 +147,6 @@ function course_selected( obj ) {
 	course_id = $( 'option:selected', obj ).val();
 
 	if ( course_id != null && course_id != 'undefined' && course_id != '' ) {
-		// console.log( course_id );
 		$.ajax({
 			type: "GET",
 			url: AvadaParams.ajaxurl,

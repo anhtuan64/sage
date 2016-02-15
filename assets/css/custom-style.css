@@ -57,11 +57,39 @@ h1.entry-title .characters {
 	border-bottom: none;
 }
 
+/* Taxonomy event
+--------------------------------------------------- */
+.tax-k-event-category h1.entry-title {
+    margin-bottom: 0;
+}
+.tax-k-event-category #posts-container.fusion-blog-layout-grid {
+    margin: -15px -30px 0 -30px;
+}
+.tax-k-event-category #posts-container.fusion-blog-layout-grid .post {
+    padding: 20px 30px;
+}
+.tax-k-event-category .fusion-single-line-meta {
+    display: none;
+}
+.tax-k-event-category .information-event p {
+    margin-bottom: 0;
+    color: #333333;
+}
+.tax-k-event-category .information-event .e_time {
+    margin-left: 5px;
+}
+.tax-k-event-category .information-event .fa {
+    width: 16px;
+    text-align: center;
+    margin-right: 10px;
+}
+
 /* page course 
 -------------------------------------------------- */
 .page-template-list-course #main > .fusion-row {
 	margin-bottom: 25px;
 }
+
 /* taxonomy  */
 .cate-caurse .cate-ul, 
 .cate-caurse .box-new-relate .list-relate {

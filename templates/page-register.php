@@ -129,7 +129,8 @@
 						wp_reset_postdata();
 					endif;
 				else:
-					// echo do_shortcode('[alert type="error"]xxx[/alert]');
+					$course_id = $_GET['course_id'];
+					// var_dump($course_id);
 			?>
 				<form method="post" class="register-form">
 					<div class="box-science course-information">

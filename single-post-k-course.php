@@ -63,8 +63,8 @@
 
 					foreach ( $arr_course_meta as $meta => $val ) {
 						if ( function_exists( 'get_field' ) ) {
-							if ( get_field( $meta, $id ) ) {
-								$arr_course_meta_val[$meta] = get_field( $meta, $id );
+							if ( get_field( $meta, get_the_ID() ) ) {
+								$arr_course_meta_val[$meta] = get_field( $meta, get_the_ID() );
 							}
 						}
 					}
@@ -104,7 +104,20 @@
 						// var_dump($adress);?>
 					</div>
 					<div>
-						<a href="" class="course-register"><?php _e( 'Course Register', RT_LANGUAGE )?></a>
+					<?php 
+						global $smof_data;
+
+						$register_page_link = $smof_data['theme_setup_register_page_link'];
+						if ( ! empty( $register_page_link ) ) :
+							$new_register_link = str_replace( '?', '', $register_page_link );
+							if ( $new_register_link != $register_page_link ) {
+								$register_page_link .= '&course_id=' . get_the_ID();
+							} else {
+								$register_page_link .= '?course_id=' . get_the_ID();
+							}
+					?>
+						<a href="<?php echo $register_page_link;?>" class="course-register"><?php _e( 'Course Register', RT_LANGUAGE )?></a>
+					<?php endif;?>
 					</div>
 				</div>
 				<div class="post-content">

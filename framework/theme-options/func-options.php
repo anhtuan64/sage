@@ -18,6 +18,11 @@ if( ! function_exists( 'rt_of_options_array') )
 			"type" => "heading"
 		);
 
+		$of_options[] = array( "name" => __("Register page link", RT_LANGUAGE),
+			"id" => "theme_setup_register_page_link",
+			"std" => "",
+			"type" => "text");
+
 		$of_options[] = array( "name" => __("Enable admin theme", RT_LANGUAGE),
 			"id" => "theme_setup_admin_theme",
 			"std" => "default",
