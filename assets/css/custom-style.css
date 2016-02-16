@@ -725,7 +725,7 @@ h1.entry-title .characters {
     overflow: hidden;
     background: #d97158;
     float: left;
-    margin:0 20px;
+    margin:0 20px 20px;
     border-radius: 5px;
 }
 .single-post-k-teacher #content .post-inner .realate-post .box-relate:nth-child(2n) {
