@@ -12,22 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) exit( 'Direct script access denied.' );
 
 global $wp_query;
 
-// Get custom field 
-$arr_event_custom_meta	= 	array( 
-			'e_date'       			=>        '',
-			'e_time'       			=>        '',
-			'e_adress'       		=>        '',
-			'e_detail_adress'       =>        '',
-			'e_fees'       			=>        '',
-);
-foreach ( $arr_event_custom_meta as $meta => $val ) {
-	if ( function_exists( 'get_field' ) ) {
-		if ( get_field( $meta, $id ) ) {
-			$arr_event_custom_val[$meta] = get_field( $meta, $id );
-		}
-	}
-}
-extract( shortcode_atts( $arr_event_custom_meta, $arr_event_custom_val ) );
+
 
 // Set the correct post container layout classes
 $blog_layout = 	avada_get_blog_layout();
@@ -191,6 +176,24 @@ echo sprintf( '<div id="posts-container" class="fusion-blog-layout-grid fusion-b
 						) {
 							echo avada_render_post_metadata( 'alternate' );
 						}
+
+						
+						// Get custom field 
+						$arr_event_custom_meta	= 	array( 
+									'e_date'       			=>        '',
+									'e_time'       			=>        '',
+									'e_adress'       		=>        '',
+									'e_detail_adress'       =>        '',
+									'e_fees'       			=>        '',
+						);
+						foreach ( $arr_event_custom_meta as $meta => $val ) {
+							if ( function_exists( 'get_field' ) ) {
+								if ( get_field( $meta, $id ) ) {
+									$arr_event_custom_val[$meta] = get_field( $meta, $id );
+								}
+							}
+						}
+						extract( shortcode_atts( $arr_event_custom_meta, $arr_event_custom_val ) );
 
 						// Display custom field
 						if( !empty( $e_date ) || !empty( $e_time ) || !empty( $e_adress ) || !empty( $e_detail_adress ) || !empty( $e_fees ) ) :
