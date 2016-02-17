@@ -32,19 +32,22 @@ h1.entry-title .characters {
 
 /* Main Menu
 --------------------------------------------------- */
+.fusion-row .fusion-main-menu ul {
+	padding-top: 3px;
+}
 .fusion-row .fusion-main-menu .sub-menu li a {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	border-bottom: 1px solid #FFF;
 }
 .fusion-row .fusion-main-menu > ul > li > a {
-	border-top: none;	
+	border-top: none;
 }
 .fusion-row .fusion-main-menu .sub-menu {
 	border-top: none;
 }
-.fusion-row .fusion-main-menu .sub-menu ul {
-	top: 0;
+.fusion-row .fusion-main-menu .sub-menu {
+
 }
 
 /* Slider
@@ -369,8 +372,9 @@ h1.entry-title .characters {
 }
 .informations-contact p {
 	margin-top: 0px;
-	margin-bottom: 1px;
-	line-height: 30px;
+    margin-bottom: -1px;
+    clear: both;
+    line-height: 31px;
 }
 .informations-contact p span {
 	line-height: 30px;
@@ -381,7 +385,7 @@ h1.entry-title .characters {
 	font-size: 18px;
     margin-right: 15px;
     width: 18px;
-    line-height: 31px;
+    line-height: 32px;
     text-align: center;
 }
 .informations-contact .fusion-social-links {
@@ -528,13 +532,14 @@ h1.entry-title .characters {
 --------------------------------------------------- */
 /* Contact Form 7 */
 .fusion-column-wrapper .wpcf7-form p {
-	margin-bottom: 25px;
+	margin-top: 10px;
+	margin-bottom: 0px;
 }
 .fusion-column-wrapper .wpcf7-form .wpcf7-text {
-	height: 40px;
+	height: 30px;
 }
 .fusion-column-wrapper .wpcf7-form .wpcf7-textarea {
-	height: 110px;
+	height: 70px;
 }
 .fusion-column-wrapper .wpcf7-form .wpcf7-submit {
 	background: #c60719;
@@ -574,6 +579,9 @@ h1.entry-title .characters {
 	text-align: center;
 	border: none;
 	cursor: pointer;
+}
+.newsletter-submit:hover {
+	background: #5d020b;
 }
 
 /* page register
