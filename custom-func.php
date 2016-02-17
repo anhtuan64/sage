@@ -68,11 +68,11 @@ if( ! function_exists( 'rt_register_custom_post_type' ) ) {
  */
 if ( ! function_exists( 'shortcode_post_teacher' ) ) {
 	function shortcode_post_teacher( $atts , $content ) {
-		$html = '<div class="tribe-events"><div class="fusion-posts-teacher fusion-blog-layout-grid fusion-blog-layout-grid-4 isotope">';
+		$html = '<div class="tribe-events"><div class="fusion-posts-teacher fusion-blog-layout-grid fusion-blog-layout-grid-3 isotope">';
 		
 		$args = array(
 			'post_type'  			=> 'post-k-teacher',
-			'posts_per_page'		=> 4,
+			'posts_per_page'		=> 3,
 		);
 
 		$the_query = new WP_Query( $args );

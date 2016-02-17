@@ -6,7 +6,6 @@
 }
 h1.entry-title {
 	line-height: 70px;
-	height: 70px;
 	margin-bottom: 35px;
 	margin-top: 15px;
 	border-bottom: 1px solid #dcdcdc;
@@ -499,11 +498,11 @@ h1.entry-title .characters {
 
 /* Teacher */
 .fusion-posts-teacher {
-    margin-left: -25px;
-    margin-right: -25px;
+    margin-left: -60px;
+    margin-right: -60px;
 }
 .fusion-posts-teacher .fusion-post-grid {
-	padding: 10px 25px 15px 25px;
+	padding: 10px 60px 15px 60px;
 }
 .fusion-posts-teacher .entry-title {
 	margin-top: 15px;
