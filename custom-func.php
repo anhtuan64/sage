@@ -81,7 +81,7 @@ if ( ! function_exists( 'shortcode_post_teacher' ) ) {
 			$html .= '<article id="post-'. get_the_ID() .'" class="'. implode( ' ', get_post_class( 'post fusion-post-grid' ) ) .'"><div class="post-inner">';
 			if ( has_post_thumbnail() ) :
 				$html .= '<div class="entry-thumb">';
-				$html .= '<a href="'. get_permalink() .'" title="'. get_the_title() .'">' . get_the_post_thumbnail( get_the_ID(), 'rt_thumb255x275' ) . '</a>';
+				$html .= '<a href="'. get_permalink() .'" title="'. get_the_title() .'">' . get_the_post_thumbnail( get_the_ID(), 'rt_thumb300x400' ) . '</a>';
 				$html .= '</div>';
 			endif;
 			$html .= '<h3 class="entry-title"><a href="'. get_permalink() .'" title="'. get_the_title() .'">'. get_the_title() .'</a></h3>';
