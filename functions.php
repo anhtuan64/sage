@@ -55,6 +55,7 @@ function theme_enqueue_styles() {
 	wp_enqueue_style( 'rt-widgets', RT_THEME_URL . 'assets/css/widgets.css' );
 	wp_enqueue_style( 'rt-main-style', RT_THEME_URL . 'assets/css/main-style.css' );
 	wp_enqueue_style( 'rt-custom-style', RT_THEME_URL . 'assets/css/custom-style.css' );
+	wp_enqueue_style( 'rt-responsive', RT_THEME_URL . 'assets/css/responsive.css' );
 
 	/*-----------------------------------------------------------------*/
 	wp_register_script( 'owl-carousel', RT_THEME_URL . 'assets/js/third-party/owl-carousel/owl.carousel.min.js', array(), '1.0', true );
