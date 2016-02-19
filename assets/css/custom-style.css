@@ -14,7 +14,7 @@ h1.entry-title {
 	text-transform: uppercase;
 }
 h1.entry-title .first-character {
-	color: #8f0512;
+	color: #da2128;
 }
 h1.entry-title .characters {
 	color: #555555;
@@ -33,6 +33,17 @@ h1.entry-title .characters {
 --------------------------------------------------- */
 .fusion-header-wrapper .fusion-row .fusion-main-menu > ul > li > ul.sub-menu > li > a {
 	padding: 10px 20px;
+}
+.fusion-header-wrapper .fusion-row .fusion-main-menu > ul > li > a {
+	font-weight: bold;
+}
+.fusion-header-wrapper .fusion-row .fusion-main-menu > ul > li:hover > a,
+.fusion-header-wrapper .fusion-row .fusion-main-menu > ul .current-menu-ancestor > a,
+.fusion-header-wrapper .fusion-row .fusion-main-menu > ul .current-menu-item > a,
+.fusion-header-wrapper .fusion-row .fusion-main-menu > ul .current-menu-parent > a,
+.fusion-header-wrapper .fusion-row .fusion-main-menu > ul .current_page_item > a,
+.fusion-header-wrapper .fusion-row .fusion-main-menu .sub-menu {
+	border-color: #333;
 }
 
 /* Slider
@@ -146,7 +157,7 @@ h1.entry-title .characters {
 }
 .cate-caurse .cate-ul li .title-cate {
 	display: block;
-	color: #8f0512;
+	color: #da2128;
 	font-size: 14px;
 	font-weight: bold;
 	font-family:Arial;
@@ -286,7 +297,7 @@ h1.entry-title .characters {
 	width: calc(100% - 90px);
 }
 .single-post-k-course .post-inner .post-meta .course-register {
-	background: #8f0512;
+	background: #da2128;
 	display: block;
 	width: 100%;
 	padding: 10px 0;
@@ -441,7 +452,7 @@ h1.entry-title .characters {
 	padding-top: 5px;
 }
 .fusion-column-wrapper .fusion-testimonials.clean .company-name strong {
-	color: #8f0512;
+	color: #da2128;
 }
 
 /* Blog */
@@ -466,7 +477,7 @@ h1.entry-title .characters {
 	line-height: 1.5em;
 }
 #wrapper #main .fusion-blog-layout-grid > .fusion-post-grid > .fusion-post-wrapper > .fusion-post-content-wrapper .entry-title a {
-	color: #8f0512;
+	color: #da2128;
 }
 #wrapper #main .fusion-blog-layout-grid > .fusion-post-grid > .fusion-post-wrapper > .fusion-post-content-wrapper .fusion-meta-info {
 	display: none;
@@ -675,7 +686,7 @@ h1.entry-title .characters {
 }
 .single-post-k-teacher #content .post-meta p.title-name {
 	font-size: 18px;
-	color: #8f0512;
+	color: #da2128;
 	font-weight: bold;
 	line-height: 0;
 }
@@ -690,7 +701,7 @@ h1.entry-title .characters {
 	width: 71%;
 }
 .single-post-k-teacher #content .post-inner p.title-name {
-	color: #8f0512;
+	color: #da2128;
 	font-size: 24px;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -712,7 +723,7 @@ h1.entry-title .characters {
 	margin-top: 0;
 }
 .single-post-k-teacher #content .post-inner .realate-post p.entry-title .first-character {
-	color: #8f0512;
+	color: #da2128;
 }
 .single-post-k-teacher #content .post-inner .realate-post {
 	overflow: hidden;
