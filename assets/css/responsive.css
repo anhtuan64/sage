@@ -9,6 +9,9 @@
 	.post-content p {
 		text-align: justify;
 	}
+	.ua-mobile .fusion-page-title-bar {
+		display: none;
+	}
 	
 	/* Home Page*/
 	.fusion-fullwidth-1 .fusion-column-wrapper {
@@ -24,9 +27,12 @@
 	}
 	
 	/* Footer */
+	#logo-footer {
+		text-align: center;
+	}
 	#copyright p {
 		line-height: 35px;
-		text-align: center;
+		text-align: center !important;
 	}
 	#copyright img {
 		margin-top: -5px !important;
@@ -70,7 +76,7 @@
 	}
 	/* Archive */
 	.fusion-blog-layout-grid.fusion-blog-layout-grid-5 .post-size-big {
-		width: 100%;
+		width: 100% !important;
 	}
 	
 	/*Single post teacher*/
@@ -158,6 +164,9 @@
 	.post-content p {
 		text-align: justify;
 	}
+	.ua-mobile .fusion-page-title-bar {
+		display: none;
+	}
 	
 	/* Home Page*/
 	.fusion-fullwidth-1 .fusion-column-wrapper {
@@ -173,9 +182,15 @@
 	}
 	
 	/* Footer */
+	#logo-footer {
+		text-align: center;
+	}
+	.home .fusion-column-wrapper {
+		text-align: center;
+	}
 	#copyright p {
 		line-height: 35px;
-		text-align: center;
+		text-align: center !important;
 	}
 	#copyright img {
 		margin-top: -5px !important;
@@ -219,7 +234,7 @@
 	}
 	/* Archive */
 	.fusion-blog-layout-grid.fusion-blog-layout-grid-5 .post-size-big {
-		width: 100%;
+		width: 100% !important;
 	}
 	
 	/* Single post teacher */
@@ -307,6 +322,9 @@
 	.post-content p {
 		text-align: justify;
 	}
+	.ua-mobile .fusion-page-title-bar {
+		display: none;
+	}
 	
 	/* Home Page*/
 	.fusion-fullwidth-1 .fusion-column-wrapper {
@@ -322,9 +340,12 @@
 	}
 	
 	/* Footer */
+	#logo-footer {
+		text-align: center;
+	}
 	#copyright p {
 		line-height: 35px;
-		text-align: center;
+		text-align: center !important;
 	}
 	#copyright img {
 		margin-top: -5px !important;
@@ -368,7 +389,7 @@
 	}
 	/* Archive */
 	.fusion-blog-layout-grid.fusion-blog-layout-grid-5 .post-size-big {
-		width: 100%;
+		width: 100% !important;
 	}
 	
 	/* Single post teacher */
@@ -456,6 +477,9 @@
 	.post-content p {
 		text-align: justify;
 	}
+	.ua-mobile .fusion-page-title-bar {
+		display: none;
+	}
 
 	/* Header */
 	#wrapper .fusion-header-wrapper .fusion-header, .fusion-header-wrapper .fusion-secondary-main-menu {
@@ -466,9 +490,12 @@
 	}
 	
 	/* Footer */
+	#logo-footer {
+		text-align: center;
+	}
 	#copyright p {
 		line-height: 35px;
-		text-align: center;
+		text-align: center !important;
 	}
 	#copyright img {
 		margin-top: -5px !important;
@@ -512,7 +539,7 @@
 	}
 	/* Archive */
 	.fusion-blog-layout-grid.fusion-blog-layout-grid-5 .post-size-big {
-		width: 100%;
+		width: 100% !important;
 	}
 	
 	/* Single post teacher */
