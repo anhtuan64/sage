@@ -410,9 +410,14 @@ h1.entry-title .characters {
 }
 
 /* Testimonial */
+.fusion-column-wrapper .fusion-testimonials {
+	display: inline-block;
+	width: 100%;
+	clear: both;
+}
 .fusion-column-wrapper .fusion-testimonials .testimonial-thumbnail {
 	float: left;
-	width: 160px;
+	width: 150px;
 	margin: 0;
 }
 .fusion-column-wrapper .fusion-testimonials .testimonial-thumbnail .testimonial-image {
@@ -428,11 +433,12 @@ h1.entry-title .characters {
 	margin-top: 5px;
 }
 .fusion-column-wrapper .fusion-testimonials.clean .company-name {
-	width: 55%;
+	width: 100%;
 	float: right;
 	font-size: 14px;
 	color: #555555;
 	text-align: left;
+	padding-top: 5px;
 }
 .fusion-column-wrapper .fusion-testimonials.clean .company-name strong {
 	color: #8f0512;

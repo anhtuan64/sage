@@ -74,7 +74,7 @@
 						<?php 
 							// Adress
 							if ( is_array( $adress ) && count( $adress ) ) {
-								echo '<p><label>'. __( 'Adress: ', RT_LANGUAGE ) .'</label><select class="">';
+								echo '<p><label>'. __( 'Địa điểm: ', RT_LANGUAGE ) .'</label><select class="">';
 								foreach ( $adress as $key => $value ) {
 									echo '<option value="'. $value['name'] .'">'. $value['name'] .'</option>';
 								}
@@ -82,7 +82,7 @@
 							}
 							// Opening
 							if ( is_array( $opening ) && count( $opening ) ) {
-								echo '<p><label>'. __( 'Opening: ', RT_LANGUAGE ) .'</label><select class="">';
+								echo '<p><label>'. __( 'Khai giảng: ', RT_LANGUAGE ) .'</label><select class="">';
 								foreach ( $opening as $key => $value ) {
 									echo '<option value="'. $value['date'] .'">'. $value['date'] .'</option>';
 								}
@@ -90,15 +90,15 @@
 							}
 							// Class
 							if ( ! empty( $class ) ) {
-								echo '<p><label>'. __( 'Class: ', RT_LANGUAGE ) .'</label><span class="">'. $class .'</span></p>';
+								echo '<p><label>'. __( 'Lớp: ', RT_LANGUAGE ) .'</label><span class="">'. $class .'</span></p>';
 							}
 							// Duration
 							if ( ! empty( $duration ) ) {
-								echo '<p><label>'. __( 'Duration: ', RT_LANGUAGE ) .'</label><span class="">'. $duration .'</span></p>';
+								echo '<p><label>'. __( 'Thời gian: ', RT_LANGUAGE ) .'</label><span class="">'. $duration .'</span></p>';
 							}
 							// Tuition
 							if ( ! empty( $tuition ) ) {
-								echo '<p><label>'. __( 'Tuition: ', RT_LANGUAGE ) .'</label><span class="">'. $tuition .'</span></p>';
+								echo '<p><label>'. __( 'Học phí: ', RT_LANGUAGE ) .'</label><span class="">'. $tuition .'</span></p>';
 							}
 
 						// var_dump($adress);?>
@@ -132,7 +132,7 @@
 						$trainer .= '<div class="course-teacher">';
 						$trainer .= '<div class="course-teacher-thumb">';
 						if ( has_post_thumbnail( $teacher->ID ) ) {
-							$trainer .= '<a href="'. get_permalink( $teacher->ID ) .'" title="'. $teacher->post_title .'">'. get_the_post_thumbnail( $teacher->ID, 'rt_thumb300x300' ) .'</a>';
+							$trainer .= '<a href="'. get_permalink( $teacher->ID ) .'" title="'. $teacher->post_title .'">'. get_the_post_thumbnail( $teacher->ID, 'rt_thumb300x400' ) .'</a>';
 						}
 						$trainer .= '<p class="course-teacher-title"><a href="'. get_permalink( $teacher->ID ) .'" title="'. $teacher->post_title .'">'. $teacher->post_title .'</a></p>';
 						if ( get_field( 'organize', $teacher->ID ) ) {
@@ -146,10 +146,10 @@
 					}
 					// var_dump($brochure);
 					$shortcodes = '[fusion_tabs design="clean" layout="horizontal" justified="yes" backgroundcolor="" inactivecolor="" bordercolor="" class="" id=""]
-					[fusion_tab title="'. __( 'Course Content', RT_LANGUAGE ) .'" icon=""]'. $course_content .'[/fusion_tab]
-					[fusion_tab title="'. __( 'Benefits of Participation', RT_LANGUAGE ) .'" icon=""]'. $course_benefits .'[/fusion_tab]
-					[fusion_tab title="'. __( 'Who should attend', RT_LANGUAGE ) .'" icon=""]'. $who_course .'[/fusion_tab]
-					[fusion_tab title="'. __( 'Trainer', RT_LANGUAGE ) .'" icon=""]'. $trainer .'[/fusion_tab]
+					[fusion_tab title="'. __( 'Nội dung khoá học', RT_LANGUAGE ) .'" icon=""]'. $course_content .'[/fusion_tab]
+					[fusion_tab title="'. __( 'Lợi ích khi tham gia', RT_LANGUAGE ) .'" icon=""]'. $course_benefits .'[/fusion_tab]
+					[fusion_tab title="'. __( 'Ai nên tham dự?', RT_LANGUAGE ) .'" icon=""]'. $who_course .'[/fusion_tab]
+					[fusion_tab title="'. __( 'Huấn luyện viên', RT_LANGUAGE ) .'" icon=""]'. $trainer .'[/fusion_tab]
 					[fusion_tab title="'. __( 'Brochure', RT_LANGUAGE ) .'" icon=""]'. '<embed src="'. $brochure .'" width="100%" height="500"></embed>' .'[/fusion_tab]
 					[/fusion_tabs]';
 					echo do_shortcode( $shortcodes );

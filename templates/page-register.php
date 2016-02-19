@@ -81,7 +81,8 @@
 					}
 					extract( shortcode_atts( $arr_form_element, $arr_form_element_val ) );
 
-					if ( ! empty( $course ) && count( $sex ) > 0 && count( $fullname ) > 0 && count( $phone ) > 0 && count( $email ) > 0 && count( $company ) > 0 && count( $position ) > 0 && count( $fields ) && ! empty( $where_source_course ) && ! empty( $payment_type ) ) :
+					if ( count( $sex ) > 0 && count( $fullname ) > 0 && count( $email ) > 0 ) :
+						$course = '';
 						
 						$args = array(
 							'post_type'  			=> 'post-k-course',
@@ -92,41 +93,39 @@
 						if ( $course_query->have_posts() ) :
 							while( $course_query->have_posts() ): $course_query->the_post();
 								$course = get_the_title();
-
-								for ( $i = 0; $i < count( $sex ); $i++ ) { 
-									if ( ! empty( $sex[$i] ) && ! empty( $fullname[$i] ) && ! empty( $phone[$i] ) && ! empty( $email[$i] ) && ! empty( $company[$i] ) && ! empty( $position[$i] ) && ! empty( $fields[$i] ) ) {
-										// Insert member to database
-										$memeber_arr = array(
-											'post_type'			=> 'post-k-member',
-											// 'post_status'		=> 'publish',
-											'post_title'		=> wp_strip_all_tags( $fullname[$i] ),
-											'meta_input'		=> array(
-												'course_name'			=> wp_strip_all_tags( $course ),
-												'adress'				=> wp_strip_all_tags( $adress ),
-												'date'					=> wp_strip_all_tags( $date ),
-												'sex'					=> wp_strip_all_tags( $sex[$i] ),
-												'phone'					=> wp_strip_all_tags( $phone[$i] ),
-												'email'					=> wp_strip_all_tags( $email[$i] ),
-												'company'				=> wp_strip_all_tags( $company[$i] ),
-												'position'				=> wp_strip_all_tags( $position[$i] ),
-												'field'					=> wp_strip_all_tags( $fields[$i] ),
-												'where_source_course'	=> wp_strip_all_tags( $where_source_course ),
-												'payment_type'			=> wp_strip_all_tags( $payment_type ),
-											),
-
-										);
-										if ( wp_insert_post( $memeber_arr ) ) {
-											_e( '<center>Thanks '. $fullname[$i] .' for registering at SAGE Academy courses</br>We will contact you as soon as possible.</center>', RT_LANGUAGE );
-										} else {
-											_e( '<center>Your register error, Please try again.</center>', RT_LANGUAGE );
-										}
-									} else {
-										_e( '<center>You have not filled all information, Please reset the page and fill in the information before submit.</center>', RT_LANGUAGE );
-									}
-								}
 							endwhile;
-						else: return;
 						endif;
+						for ( $i = 0; $i < count( $sex ); $i++ ) { 
+							if ( ! empty( $sex[$i] ) && ! empty( $fullname[$i] ) && ! empty( $phone[$i] ) && ! empty( $email[$i] ) ) {
+								// Insert member to database
+								$memeber_arr = array(
+									'post_type'			=> 'post-k-member',
+									// 'post_status'		=> 'publish',
+									'post_title'		=> wp_strip_all_tags( $fullname[$i] ),
+									'meta_input'		=> array(
+										'course_name'			=> wp_strip_all_tags( $course ),
+										'adress'				=> wp_strip_all_tags( $adress ),
+										'date'					=> wp_strip_all_tags( $date ),
+										'sex'					=> wp_strip_all_tags( $sex[$i] ),
+										'phone'					=> wp_strip_all_tags( $phone[$i] ),
+										'email'					=> wp_strip_all_tags( $email[$i] ),
+										'company'				=> wp_strip_all_tags( $company[$i] ),
+										'position'				=> wp_strip_all_tags( $position[$i] ),
+										'field'					=> wp_strip_all_tags( $fields[$i] ),
+										'where_source_course'	=> wp_strip_all_tags( $where_source_course ),
+										'payment_type'			=> wp_strip_all_tags( $payment_type ),
+									),
+
+								);
+								if ( wp_insert_post( $memeber_arr ) ) {
+									_e( '<center>Thanks '. $fullname[$i] .' for registering at SAGE Academy courses</br>We will contact you as soon as possible.</center>', RT_LANGUAGE );
+								} else {
+									_e( '<center>Your register error, Please try again.</center>', RT_LANGUAGE );
+								}
+							} else {
+								_e( '<center>You have not filled all information, Please reset the page and fill in the information before submit.</center>', RT_LANGUAGE );
+							}
+						}
 						wp_reset_postdata();
 					endif;
 				else:
@@ -136,7 +135,7 @@
 				<form method="post" class="register-form">
 					<div class="box-science course-information">
 						<div class="acf-error-message"></div>
-						<h3> <?php _e( 'Course Information', RT_LANGUAGE ) ?> </h3>
+						<h3> <?php _e( 'Thông tin khóa học', RT_LANGUAGE ) ?> </h3>
 						<?php 
 							// Get custom fields of page register
 							$fields 					= get_field( "fields", get_the_ID() );
@@ -152,7 +151,7 @@
 						?> 
 						<ul> 
 							<li> 
-								<span class="left">	<?php _e( 'Course: *', RT_LANGUAGE ) ?> </span>
+								<span class="left">	<?php _e( 'Tên khóa học: *', RT_LANGUAGE ) ?> </span>
 								<span class="right"> 
 									<select name="course" class="course" onchange="course_selected( jQuery(this) );" required>
 										<option value=""><?php _e( 'Please choose', RT_LANGUAGE ) ?></option>
@@ -168,7 +167,7 @@
 								</span>
 							</li><!-- end Science name  -->
 							<li> 
-								<span class="left">	<?php _e( 'Adress:', RT_LANGUAGE ) ?> </span>
+								<span class="left">	<?php _e( 'Địa điểm:', RT_LANGUAGE ) ?> </span>
 								<span class="right"> 
 									<select name="adress" class="adress">
 										<option value=""><?php _e( 'Please choose', RT_LANGUAGE ) ?></option>
@@ -188,10 +187,10 @@
 
 					<div class="student-information">
 						<div class="box-science">
-							<h3> <?php _e( 'Student information', RT_LANGUAGE ) ?> </h3>
+							<h3> <?php _e( 'Thông tin học viên', RT_LANGUAGE ) ?> </h3>
 							<ul> 
 								<li> 
-									<span class="left">	<?php _e( 'Sex: ', RT_LANGUAGE ) ?> </span>
+									<span class="left">	<?php _e( 'Quý danh: ', RT_LANGUAGE ) ?> </span>
 									<span class="right"> 
 										<select name="sex[]" required>
 											<option value="Mr">Mr</option>
@@ -200,13 +199,13 @@
 									</span>
 								</li><!-- end name  -->
 								<li> 
-									<span class="left">	<?php _e( 'Full Name: ', RT_LANGUAGE ) ?> </span>
+									<span class="left">	<?php _e( 'Họ và tên: ', RT_LANGUAGE ) ?> </span>
 									<span class="right"> 
 										 <input name="fullname[]" class="fullname" placeholder="<?php _e( 'First and last name: ', RT_LANGUAGE ) ?>" value="" required />
 									</span>
 								</li><!-- end First and last name  -->
 								<li> 
-									<span class="left">	<?php _e( 'Phone: ', RT_LANGUAGE ) ?> </span>
+									<span class="left">	<?php _e( 'Điện thoại: ', RT_LANGUAGE ) ?> </span>
 									<span class="right"> 
 										 <input name="phone[]" class="phone" placeholder="<?php _e( 'Phone: ', RT_LANGUAGE ) ?>"  required />
 									</span>
@@ -218,19 +217,19 @@
 									</span>
 								</li><!-- end email  -->
 								<li> 
-									<span class="left">	<?php _e( 'Company: ', RT_LANGUAGE ) ?> </span>
+									<span class="left">	<?php _e( 'Công ty: ', RT_LANGUAGE ) ?> </span>
 									<span class="right"> 
 										 <input name="company[]" class="company" placeholder="<?php _e( 'Company: ', RT_LANGUAGE ) ?>"  required />
 									</span>
 								</li><!-- end Company  -->
 								<li> 
-									<span class="left">	<?php _e( 'Position: ', RT_LANGUAGE ) ?> </span>
+									<span class="left">	<?php _e( 'Chức vụ: ', RT_LANGUAGE ) ?> </span>
 									<span class="right"> 
 										 <input name="position[]" class="position" placeholder="<?php _e( 'Position: ', RT_LANGUAGE ) ?>"  required />
 									</span>
 								</li><!-- end Position  -->
 								<li> 
-									<span class="left">	<?php _e( 'Field: ', RT_LANGUAGE ) ?> </span>
+									<span class="left">	<?php _e( 'Lĩnh vực: ', RT_LANGUAGE ) ?> </span>
 									<span class="right"> 
 										<select name="fields[]" required>
 											<option value=""><?php _e( 'Please choose', RT_LANGUAGE ) ?></option>
@@ -249,10 +248,10 @@
 					</div> <!-- end Student information -->
 
 					<div class="box-science more-information">
-						<h3> <?php _e( 'Student information', RT_LANGUAGE ) ?> </h3>
+						<h3> <?php _e( 'Thông tin thêm', RT_LANGUAGE ) ?> </h3>
 						<ul>
 							<li> 
-								<span class="left">	<?php _e( 'You know what courses through sources?: ', RT_LANGUAGE ) ?> </span>
+								<span class="left">	<?php _e( 'Bạn biết đến khóa học qua nguồn nào?: ', RT_LANGUAGE ) ?> </span>
 								<span class="right"> 
 									<select name="where_source_course" class="where_source_course" required>
 										<option value=""><?php _e( 'Please choose', RT_LANGUAGE ) ?></option>
@@ -267,7 +266,7 @@
 								</span>
 							</li><!-- end You know what courses through sources  -->
 							<li> 
-								<span class="left">	<?php _e( 'Payment type: ', RT_LANGUAGE ) ?> </span>
+								<span class="left">	<?php _e( 'Loại hình thanh toán: ', RT_LANGUAGE ) ?> </span>
 								<span class="right"> 
 									<select name="payment_type" class="payment_type" required>
 										<option value=""><?php _e( 'Please choose', RT_LANGUAGE ) ?></option>
@@ -285,8 +284,8 @@
 					</div> <!-- end More information -->
 
 					<div class="button-register"> 
-						<a id="register_user_addmore" class="button navy small" href="#"><?php _e( 'Add More', RT_LANGUAGE ) ?></a>
-						<input class="button small" type="submit" name="submit" value="<?php _e( 'Register', RT_LANGUAGE ) ?>" />
+						<a id="register_user_addmore" class="button navy small" href="#"><?php _e( 'Thêm người đăng ký', RT_LANGUAGE ) ?></a>
+						<input class="button small" type="submit" name="submit" value="<?php _e( 'Đăng Ký', RT_LANGUAGE ) ?>" />
 					</div>
 
 				</form>
