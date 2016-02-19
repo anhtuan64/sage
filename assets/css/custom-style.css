@@ -37,14 +37,6 @@ h1.entry-title .characters {
 .fusion-header-wrapper .fusion-row .fusion-main-menu > ul > li > a {
 	font-weight: bold;
 }
-.fusion-header-wrapper .fusion-row .fusion-main-menu > ul > li:hover > a,
-.fusion-header-wrapper .fusion-row .fusion-main-menu > ul .current-menu-ancestor > a,
-.fusion-header-wrapper .fusion-row .fusion-main-menu > ul .current-menu-item > a,
-.fusion-header-wrapper .fusion-row .fusion-main-menu > ul .current-menu-parent > a,
-.fusion-header-wrapper .fusion-row .fusion-main-menu > ul .current_page_item > a,
-.fusion-header-wrapper .fusion-row .fusion-main-menu .sub-menu {
-	border-color: #333;
-}
 
 /* Slider
 --------------------------------------------------- */
