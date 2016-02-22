@@ -118,13 +118,15 @@
 
 								);
 								if ( wp_insert_post( $memeber_arr ) ) {
-									_e( '<center>Thanks '. $fullname[$i] .' for registering at SAGE Academy courses</br>We will contact you as soon as possible.</center>', RT_LANGUAGE );
-								} else {
-									_e( '<center>Your register error, Please try again.</center>', RT_LANGUAGE );
-								}
-							} else {
-								_e( '<center>You have not filled all information, Please reset the page and fill in the information before submit.</center>', RT_LANGUAGE );
-							}
+									_e( '<center>Học viện Thương hiệu Plato cảm ơn sự quan tâm của anh chị tới các hoạt động của học viện.<br/>Chúng tôi xin phép được gửi mail cho anh chị những thông tin về khóa học và các hoạt động của học viện để anh chị có thể theo dõi và tham gia cùng học viên Thương hiệu Plato.<br/>Trân trọng!</center>', RT_LANGUAGE );
+								} 
+								// else {
+								// 	_e( '<center>Your register error, Please try again.</center>', RT_LANGUAGE );
+								// }
+							} 
+							// else {
+							// 	_e( '<center>You have not filled all information, Please reset the page and fill in the information before submit.</center>', RT_LANGUAGE );
+							// }
 						}
 						wp_reset_postdata();
 					endif;

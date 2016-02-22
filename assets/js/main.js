@@ -117,24 +117,11 @@
 			});
 		}
 
-		// $('.register-form').submit(function () {
-		// 	var course = $('.course', $(this)).val(),
-		// 		where_source_course = $('.where_source_course', $(this)).val(),
-		// 		payment_type = $('.payment_type', $(this)).val();
-
-		// 	if ( course == null || course == 'undefined' || course == '' ) {
-		// 		$('.acf-error-message',  $(this)).html('Course not null');
-		// 		return false;
-		// 	}
-		// 	if ( where_source_course == null || where_source_course == 'undefined' || where_source_course == '' ) {
-		// 		$('.acf-error-message',  $(this)).html('You know what courses through sources not null');
-		// 		return false;
-		// 	}
-		// 	if ( payment_type == null || payment_type == 'undefined' || payment_type == '' ) {
-		// 		$('.acf-error-message',  $(this)).html('Payment type not null');
-		// 		return false;
-		// 	}
-		// });
+		$('.fusion-testimonials .testi-more').click(function (){
+			var parent = $(this).parent();
+			$('.testi-word-disable', parent).css({'width': 'auto', 'height': '100%', 'display': 'inline'});
+			$(this).css('display', 'none');
+		});
 			  
 	});
 }(jQuery);

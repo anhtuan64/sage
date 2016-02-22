@@ -252,7 +252,7 @@ acf_add_local_field_group(array (
 			'taxonomy' => array (
 			),
 			'allow_null' => 0,
-			'multiple' => 0,
+			'multiple' => 1,
 			'return_format' => 'object',
 			'ui' => 1,
 		),

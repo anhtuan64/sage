@@ -68,11 +68,11 @@ if( ! function_exists( 'rt_register_custom_post_type' ) ) {
  */
 if ( ! function_exists( 'shortcode_post_teacher' ) ) {
 	function shortcode_post_teacher( $atts , $content ) {
-		$html = '<div class="tribe-events"><div class="fusion-posts-teacher fusion-blog-layout-grid fusion-blog-layout-grid-3 isotope">';
+		$html = '<div class="tribe-events"><div class="fusion-posts-teacher fusion-blog-layout-grid fusion-blog-layout-grid-4 isotope"><div class="fusion-row">';
 		
 		$args = array(
 			'post_type'  			=> 'post-k-teacher',
-			'posts_per_page'		=> 3,
+			'posts_per_page'		=> 4,
 		);
 
 		$the_query = new WP_Query( $args );
@@ -95,7 +95,7 @@ if ( ! function_exists( 'shortcode_post_teacher' ) ) {
 			endif;
 			$html .= '</div></article>';
 		endwhile;
-		$html .= '</div></div>';
+		$html .= '</div></div></div>';
 		return $html;
 	}
 	add_shortcode( 'shortcode_post_teacher' , 'shortcode_post_teacher' );

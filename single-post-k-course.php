@@ -116,7 +116,7 @@
 								$register_page_link .= '?course_id=' . get_the_ID();
 							}
 					?>
-						<a href="<?php echo $register_page_link;?>" class="course-register"><?php _e( 'Course Register', RT_LANGUAGE )?></a>
+						<a href="<?php echo $register_page_link;?>" class="course-register"><?php _e( 'Đăng ký khoá học', RT_LANGUAGE )?></a>
 					<?php endif;?>
 					</div>
 				</div>
@@ -128,21 +128,23 @@
 				<?php
 					// Trainer
 					$trainer = '';
-					if ( $teacher ) {
-						$trainer .= '<div class="course-teacher">';
-						$trainer .= '<div class="course-teacher-thumb">';
-						if ( has_post_thumbnail( $teacher->ID ) ) {
-							$trainer .= '<a href="'. get_permalink( $teacher->ID ) .'" title="'. $teacher->post_title .'">'. get_the_post_thumbnail( $teacher->ID, 'rt_thumb300x400' ) .'</a>';
+					if ( count( $teacher ) > 0 ) {
+						foreach ( $teacher as $key => $teach ) {
+							$trainer .= '<div class="course-teacher">';
+							$trainer .= '<div class="course-teacher-thumb">';
+							if ( has_post_thumbnail( $teach->ID ) ) {
+								$trainer .= '<a href="'. get_permalink( $teach->ID ) .'" title="'. $teach->post_title .'">'. get_the_post_thumbnail( $teach->ID, 'rt_thumb300x400' ) .'</a>';
+							}
+							$trainer .= '<p class="course-teacher-title"><a href="'. get_permalink( $teach->ID ) .'" title="'. $teach->post_title .'">'. $teach->post_title .'</a></p>';
+							if ( get_field( 'organize', $teach->ID ) ) {
+								$trainer .= get_field( 'organize', $teach->ID );
+							}
+							$trainer .= '</div>';
+							$trainer .= '<div class="course-teacher-excerpt">';
+							$trainer .= apply_filters( 'the_content', $teach->post_excerpt );
+							$trainer .= '</div>';
+							$trainer .= '</div>';
 						}
-						$trainer .= '<p class="course-teacher-title"><a href="'. get_permalink( $teacher->ID ) .'" title="'. $teacher->post_title .'">'. $teacher->post_title .'</a></p>';
-						if ( get_field( 'organize', $teacher->ID ) ) {
-							$trainer .= get_field( 'organize', $teacher->ID );
-						}
-						$trainer .= '</div>';
-						$trainer .= '<div class="course-teacher-excerpt">';
-						$trainer .= apply_filters( 'the_content', $teacher->post_excerpt );
-						$trainer .= '</div>';
-						$trainer .= '</div>';
 					}
 					// var_dump($brochure);
 					$shortcodes = '[fusion_tabs design="clean" layout="horizontal" justified="yes" backgroundcolor="" inactivecolor="" bordercolor="" class="" id=""]
