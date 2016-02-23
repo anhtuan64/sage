@@ -22,6 +22,9 @@ h1.entry-title .characters {
 #introduce-home p {
 	margin-bottom: 0px;
 }
+iframe{
+	display: none;
+}
 
 /* Header
 --------------------------------------------------- */
@@ -238,6 +241,9 @@ h1.entry-title .characters {
 
 /* Single course
 --------------------------------------------------- */
+.single-post-k-course .fusion-page-title-row {
+	display: none;
+}
 .single-post-k-course .cate-caurse .cate-ul li {
 	padding-bottom: 0;
 	text-align: center;
@@ -460,6 +466,8 @@ h1.entry-title .characters {
 .fusion-column-wrapper .fusion-testimonials.clean .testi-more {
 	display: inline-block;
 	cursor: pointer;
+	color: #da2128;
+	font-style: italic;
 }
 
 /* Blog */

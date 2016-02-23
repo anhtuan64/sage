@@ -92,9 +92,13 @@
 							if ( ! empty( $class ) ) {
 								echo '<p><label>'. __( 'Lớp: ', RT_LANGUAGE ) .'</label><span class="">'. $class .'</span></p>';
 							}
+							// Time
+							if ( ! empty( $time ) ) {
+								echo '<p><label>'. __( 'Thời gian: ', RT_LANGUAGE ) .'</label><span class="">'. $time .'</span></p>';
+							}
 							// Duration
 							if ( ! empty( $duration ) ) {
-								echo '<p><label>'. __( 'Thời gian: ', RT_LANGUAGE ) .'</label><span class="">'. $duration .'</span></p>';
+								echo '<p><label>'. __( 'Thời lượng: ', RT_LANGUAGE ) .'</label><span class="">'. $duration .'</span></p>';
 							}
 							// Tuition
 							if ( ! empty( $tuition ) ) {
