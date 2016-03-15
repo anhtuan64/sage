@@ -122,8 +122,7 @@ if ( ! function_exists( 'rt_load_meta_data_of_course' ) ) {
 		if ( $course_query->have_posts() ) :
 			while( $course_query->have_posts() ): $course_query->the_post();
 				$arr_course_meta 		= array( 
-					'adress'				=> '', 
-					'opening' 				=> '',
+					'adress'				=> '',
 				);
 
 				foreach ( $arr_course_meta as $meta => $val ) {
@@ -134,6 +133,8 @@ if ( ! function_exists( 'rt_load_meta_data_of_course' ) ) {
 					}
 				}
 				extract( shortcode_atts( $arr_course_meta, $arr_course_meta_val ) );
+
+				$opening = $adress[0]['opening'];
 
 				$print = array(
 					'adress' 	=> json_encode( $adress ),
@@ -148,4 +149,142 @@ if ( ! function_exists( 'rt_load_meta_data_of_course' ) ) {
 	}
 	add_action('wp_ajax_rt_load_meta_data_of_course', 'rt_load_meta_data_of_course');
 	add_action('wp_ajax_nopriv_rt_load_meta_data_of_course', 'rt_load_meta_data_of_course');
+}
+
+/**
+ *
+ * Load meta data of course by ajax
+ *
+ * @param    
+ * @return
+ *
+ */
+if ( ! function_exists( 'rt_load_meta_opening_of_register_course' ) ) {
+	function rt_load_meta_opening_of_register_course() {
+		global $post, $wp_embed;
+		$id 		= $_GET['id'];
+		$p_adress 	= $_GET['adress'];
+		$args = array(
+			'post_type'  			=> 'post-k-course',
+			'posts_per_page'		=> 1,
+			'p'						=> $id,
+		);
+		$course_query = new WP_Query( $args );
+		if ( $course_query->have_posts() ) :
+			while( $course_query->have_posts() ): $course_query->the_post();
+				$arr_course_meta 		= array( 
+					'adress'				=> '',
+				);
+
+				foreach ( $arr_course_meta as $meta => $val ) {
+					if ( function_exists( 'get_field' ) ) {
+						if ( get_field( $meta, get_the_ID() ) ) {
+							$arr_course_meta_val[$meta] = get_field( $meta, get_the_ID(), 'array' );
+						}
+					}
+				}
+				extract( shortcode_atts( $arr_course_meta, $arr_course_meta_val ) );
+
+				if ( is_array( $adress ) && count( $adress ) ) {
+					foreach ( $adress as $key => $value ) {
+						if ( $value['name'] == $p_adress ) {
+							$opening = $adress[$key]['opening'];
+						} 
+					}
+				}
+
+				$print = array(
+					'opening'	=> json_encode( $opening )
+				);
+				echo( json_encode( $print ) );
+
+			endwhile;
+		endif;
+		wp_reset_postdata();
+		die();
+	}
+	add_action('wp_ajax_rt_load_meta_opening_of_register_course', 'rt_load_meta_opening_of_register_course');
+	add_action('wp_ajax_nopriv_rt_load_meta_opening_of_register_course', 'rt_load_meta_opening_of_register_course');
+}
+
+/**
+ *
+ * Load meta data of course by ajax
+ *
+ * @param    
+ * @return
+ *
+ */
+if ( ! function_exists( 'rt_load_meta_data_of_single_course' ) ) {
+	function rt_load_meta_data_of_single_course() {
+		global $post, $wp_embed;
+		$i 			= 0;
+		$id 		= $_GET['id'];
+		$p_adress 	= $_GET['adress'];
+		$args 		= array(
+			'post_type'  			=> 'post-k-course',
+			'posts_per_page'		=> 1,
+			'p'						=> $id,
+		);
+
+		$course_query = new WP_Query( $args );
+		if ( $course_query->have_posts() ) :
+			while( $course_query->have_posts() ): $course_query->the_post();
+				$arr_course_meta 		= array( 
+					'adress'				=> '', 
+				);
+
+				foreach ( $arr_course_meta as $meta => $val ) {
+					if ( function_exists( 'get_field' ) ) {
+						if ( get_field( $meta, get_the_ID() ) ) {
+							$arr_course_meta_val[$meta] = get_field( $meta, get_the_ID(), 'array' );
+						}
+					}
+				}
+				extract( shortcode_atts( $arr_course_meta, $arr_course_meta_val ) );
+
+				if ( is_array( $adress ) && count( $adress ) ) {
+					echo '<p><label>'. __( 'Địa điểm: ', RT_LANGUAGE ) .'</label><select class="" onchange="single_course_adress_selected( \''. get_the_ID() .'\', jQuery(this) );">';
+					foreach ( $adress as $key => $value ) {
+						if ( $value['name'] == $p_adress ) {
+							$i = $key;
+							echo '<option value="'. $value['name'] .'" selected="selected">'. $value['name'] .'</option>';
+						} else {
+							echo '<option value="'. $value['name'] .'">'. $value['name'] .'</option>';
+						}
+					}
+					echo '</select></p>';
+				}
+				// Opening
+				if ( is_array( $adress[$i]['opening'] ) && count( $adress[$i]['opening'] ) ) {
+					echo '<p><label>'. __( 'Khai giảng: ', RT_LANGUAGE ) .'</label><select class="">';
+					foreach ( $adress[$i]['opening'] as $key => $value ) {
+						echo '<option value="'. $value['date'] .'">'. $value['date'] .'</option>';
+					}
+					echo '</select></p>';
+				}
+				// Class
+				if ( ! empty( $adress[$i]['class'] ) ) {
+					echo '<p><label>'. __( 'Lớp: ', RT_LANGUAGE ) .'</label><span class="">'. $adress[$i]['class'] .'</span></p>';
+				}
+				// Time
+				if ( ! empty( $adress[$i]['time'] ) ) {
+					echo '<p><label>'. __( 'Thời gian: ', RT_LANGUAGE ) .'</label><span class="">'. $adress[$i]['time'] .'</span></p>';
+				}
+				// Duration
+				if ( ! empty( $adress[$i]['duration'] ) ) {
+					echo '<p><label>'. __( 'Thời lượng: ', RT_LANGUAGE ) .'</label><span class="">'. $adress[$i]['duration'] .'</span></p>';
+				}
+				// Tuition
+				if ( ! empty( $adress[$i]['tuition'] ) ) {
+					echo '<p><label>'. __( 'Học phí: ', RT_LANGUAGE ) .'</label><span class="">'. $adress[$i]['tuition'] .'</span></p>';
+				}
+
+			endwhile;
+		endif;
+		wp_reset_postdata();
+		die();
+	}
+	add_action('wp_ajax_rt_load_meta_data_of_single_course', 'rt_load_meta_data_of_single_course');
+	add_action('wp_ajax_nopriv_rt_load_meta_data_of_single_course', 'rt_load_meta_data_of_single_course');
 }

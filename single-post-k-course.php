@@ -47,11 +47,11 @@
 					// List Meta of course
 					$arr_course_meta 		= array( 
 						'adress'				=> '', 
-						'opening' 				=> '',
-						'class'					=> '',
-						'time'					=> '', 
-						'duration'				=> '', 
-						'tuition'				=> '', 
+						// 'opening' 				=> '',
+						// 'class'					=> '',
+						// 'time'					=> '', 
+						// 'duration'				=> '', 
+						// 'tuition'				=> '', 
 						'teacher'				=> '', 
 						'gallery'				=> '', 
 						// Course Content
@@ -74,38 +74,37 @@
 						<?php 
 							// Adress
 							if ( is_array( $adress ) && count( $adress ) ) {
-								echo '<p><label>'. __( 'Địa điểm: ', RT_LANGUAGE ) .'</label><select class="">';
+								echo '<p><label>'. __( 'Địa điểm: ', RT_LANGUAGE ) .'</label><select class="" onchange="single_course_adress_selected( \''. get_the_ID() .'\', jQuery(this) );">';
 								foreach ( $adress as $key => $value ) {
 									echo '<option value="'. $value['name'] .'">'. $value['name'] .'</option>';
 								}
 								echo '</select></p>';
 							}
 							// Opening
-							if ( is_array( $opening ) && count( $opening ) ) {
+							if ( is_array( $adress[0]['opening'] ) && count( $adress[0]['opening'] ) ) {
 								echo '<p><label>'. __( 'Khai giảng: ', RT_LANGUAGE ) .'</label><select class="">';
-								foreach ( $opening as $key => $value ) {
+								foreach ( $adress[0]['opening'] as $key => $value ) {
 									echo '<option value="'. $value['date'] .'">'. $value['date'] .'</option>';
 								}
 								echo '</select></p>';
 							}
 							// Class
-							if ( ! empty( $class ) ) {
-								echo '<p><label>'. __( 'Lớp: ', RT_LANGUAGE ) .'</label><span class="">'. $class .'</span></p>';
+							if ( ! empty( $adress[0]['class'] ) ) {
+								echo '<p><label>'. __( 'Lớp: ', RT_LANGUAGE ) .'</label><span class="">'. $adress[0]['class'] .'</span></p>';
 							}
 							// Time
-							if ( ! empty( $time ) ) {
-								echo '<p><label>'. __( 'Thời gian: ', RT_LANGUAGE ) .'</label><span class="">'. $time .'</span></p>';
+							if ( ! empty( $adress[0]['time'] ) ) {
+								echo '<p><label>'. __( 'Thời gian: ', RT_LANGUAGE ) .'</label><span class="">'. $adress[0]['time'] .'</span></p>';
 							}
 							// Duration
-							if ( ! empty( $duration ) ) {
-								echo '<p><label>'. __( 'Thời lượng: ', RT_LANGUAGE ) .'</label><span class="">'. $duration .'</span></p>';
+							if ( ! empty( $adress[0]['duration'] ) ) {
+								echo '<p><label>'. __( 'Thời lượng: ', RT_LANGUAGE ) .'</label><span class="">'. $adress[0]['duration'] .'</span></p>';
 							}
 							// Tuition
-							if ( ! empty( $tuition ) ) {
-								echo '<p><label>'. __( 'Học phí: ', RT_LANGUAGE ) .'</label><span class="">'. $tuition .'</span></p>';
+							if ( ! empty( $adress[0]['tuition'] ) ) {
+								echo '<p><label>'. __( 'Học phí: ', RT_LANGUAGE ) .'</label><span class="">'. $adress[0]['tuition'] .'</span></p>';
 							}
-
-						// var_dump($adress);?>
+						?>
 					</div>
 					<div>
 					<?php 

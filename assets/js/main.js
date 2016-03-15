@@ -175,9 +175,64 @@ function course_selected( obj ) {
 		$( '.adress', parent ).html( '' );
 		$( '.date', parent ).html( '' );
 	}
-	
-	// console.log(obj);
 }
+
+/*  [ Page Register: Adress Selected ]
+- - - - - - - - - - - - - - - - - - - - */
+function register_course_adress_selected( obj ) {
+	var $ = jQuery,
+	parent = obj.parent().parent().parent(),
+	adress = $( 'option:selected', obj ).val(),
+	course_id = $( '.course option:selected', parent ).val();
+
+	console.log(course_id);
+
+	if ( adress != null && adress != 'undefined' && adress != '' ) {
+		$.ajax({
+			type: "GET",
+			url: AvadaParams.ajaxurl,
+			// dataType: 'html',
+			data: ({ action: 'rt_load_meta_opening_of_register_course', id: course_id, adress: adress}),
+			success: function(data){
+				if ( data.length > 0 ) {
+					var data_parsed = $.parseJSON(data);
+					var opening_html = '';
+					if ( data_parsed.opening.length > 0 ) {
+						var opening_parsed = $.parseJSON(data_parsed.opening);
+						if ( opening_parsed && opening_parsed !== "null" && opening_parsed !== "undefined" ) {
+							for ( var opening in opening_parsed ) {
+								opening_html += '<option value="'+ opening_parsed[opening]['date'] +'">'+ opening_parsed[opening]['date'] +'</option>';
+							}
+							$( '.date', parent ).html( opening_html );
+						}
+					}
+				}
+			}
+		});
+	}
+}
+
+/*  [ Single Course: Adress Selected ]
+- - - - - - - - - - - - - - - - - - - - */
+function single_course_adress_selected( course_id, obj ) {
+	var $ = jQuery,
+	parent = obj.parent().parent(),
+	adress = $( 'option:selected', obj ).val();
+
+	if ( adress != null && adress != 'undefined' && adress != '' ) {
+		$.ajax({
+			type: "GET",
+			url: AvadaParams.ajaxurl,
+			dataType: 'html',
+			data: ({ action: 'rt_load_meta_data_of_single_course', id: course_id, adress: adress}),
+			success: function(data){
+				parent.html(data);
+			}
+		});
+	}
+}
+
+
 
 
 

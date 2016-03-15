@@ -171,7 +171,7 @@
 							<li> 
 								<span class="left">	<?php _e( 'Địa điểm:', RT_LANGUAGE ) ?> </span>
 								<span class="right"> 
-									<select name="adress" class="adress">
+									<select name="adress" class="adress" onchange="register_course_adress_selected( jQuery(this) );">
 										<option value=""><?php _e( 'Please choose', RT_LANGUAGE ) ?></option>
 									</select>
 								</span>
