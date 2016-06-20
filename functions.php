@@ -214,7 +214,7 @@ if ( ! function_exists( 'rt_register_widget' ) ) {
  */
 if ( ! function_exists( 'rt_return_list_shortcode' ) ) {
 	function rt_return_list_shortcode() {
-		$shortcodes = 'rtblog, rtblog_carousel';
+		$shortcodes = 'rtblog, rtblog_carousel, teacher-carousel';
 		return $shortcodes;
 	}
 }

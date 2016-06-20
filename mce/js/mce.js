@@ -67,8 +67,30 @@
 									});
 								}
 							},	// Rt Blog Carousel
-						], // Blog
-					},	// Blog
+
+							/* -----------Rt Teacher Carousel-----------	*/
+							{
+								text: 'Rt Teacher Carousel',
+								value: 'Rt Teacher Carousel',
+								onclick: function() {
+									ed.windowManager.open( {
+										title: 'Rt Teacher Carousel',
+										body: [
+											{type : 'textbox', name : 'posts_per_page', label				:	'Số lượng bài viết', value : '5'},
+											{type : 'listbox', name : 'column', label						:	'Số lượng bài viết / Slide', 'values': [{text: '1', value: '1'}, {text: '2', value: '2'}, {text: '3', value: '3'}, {text: '4', value: '4'}, {text: '5', value: '5'}, {text: '6', value: '6'}], value : '4' },
+											{type : 'textbox', name : 'margin_item', label					:	'Khoảng cách giữa 2 bài viết ( pixel )', value : '50'},
+											{type : 'listbox', name : 'autoplay', label						:	'Tự động chạy', 'values': [{text: 'Có', value: 'yes'}, {text: 'Không', value: 'no'}]},
+											{type : 'listbox', name : 'touch_scroll', label					:	'Cho phép chạm để kéo slide', 'values': [{text: 'Có', value: 'yes'}, {text: 'Không', value: 'no'}]},
+											{type : 'listbox', name : 'navigation', label					:	'Nút điều hướng slide', 'values': [{text: 'Hiện', value: '1'}, {text: 'Ẩn', value: '0'}]},
+										],	
+										onsubmit: function(e){
+											ed.insertContent( '[rtteacher_carousel posts_per_page="'+ e.data.posts_per_page +'" column="'+ e.data.column +'" margin_item="'+ e.data.margin_item +'" autoplay="'+ e.data.autoplay +'" touch_scroll="'+ e.data.touch_scroll +'" navigation="'+ e.data.navigation +'"][/rtteacher_carousel]');
+										}
+									});
+								}
+							},	// Rt Teacher Carousel
+						], // 
+					},	// 
 					
 					
 				],

@@ -798,3 +798,38 @@ iframe{
 .single-post-k-teacher #content .post-inner .realate-post .box-relate:nth-child(2n) .list-relate .excerpt {
 	color: #bcc2ca;
 }
+
+
+/* shortcode carousel teacher */
+.carousel-teacher .fusion-carousel .fusion-carousel-wrapper {
+	height: 470px !important;
+}
+.carousel-teacher .fusion-posts-teacher .fusion-post-grid {
+	padding: 10px 0px 15px 0px;
+}
+.wrap-carousel-navigation {
+	width: 1170px;
+	float: right;
+}
+.carousel-teacher .fusion-carousel-positioner .fusion-carousel-nav {
+	width: 80px;
+	height: 30px;
+	display: table;
+	margin: 0 auto;
+}
+.carousel-teacher .fusion-carousel-positioner .fusion-carousel-nav .fusion-nav-prev,
+.carousel-teacher .fusion-carousel-positioner .fusion-carousel-nav .fusion-nav-next {
+	margin: 0 !important;
+	position: relative;
+	border-radius: 50%;
+}
+.carousel-teacher .fusion-carousel-positioner .fusion-carousel-nav .fusion-nav-prev {
+	float: left;
+}
+.carousel-teacher .fusion-carousel-positioner .fusion-carousel-nav .fusion-nav-next {
+	left: 0 !important;
+	float: right;
+}
+.carousel-teacher .fusion-carousel .fusion-carousel-holder .entry-manifesto {
+	line-height: 20px;
+}

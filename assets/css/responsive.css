@@ -318,6 +318,15 @@
 		margin: 0 0 10px 0;
 		width: 100%;
 	}
+
+	/*Carousel Teacher*/
+	.carousel-teacher .fusion-carousel .fusion-carousel-wrapper {
+		height: 380px !important;
+	}
+	.wrap-carousel-navigation {
+		width: 100%;
+		padding-left: 50px;
+	}
 }
 
 @media screen and (min-width: 480px) and (max-width: 640px) {
@@ -478,6 +487,15 @@
 		margin: 0 0 10px 0;
 		width: 100%;
 	}
+
+	/*Carousel Teacher*/
+	.carousel-teacher .fusion-carousel .fusion-carousel-wrapper {
+		height: 380px !important;
+	}
+	.wrap-carousel-navigation {
+		width: 100%;
+		padding-left: 50px;
+	}
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
@@ -632,5 +650,16 @@
 	.page-register .button-register input {
 		margin: 0 0 10px 0;
 		width: 100%;
+	}
+
+
+
+	/*Carousel Teacher*/
+	.carousel-teacher .fusion-carousel .fusion-carousel-wrapper {
+		height: 380px !important;
+	}
+	.wrap-carousel-navigation {
+		width: 100%;
+		padding-left: 50px;
 	}
 }
